@@ -5,6 +5,7 @@
 ## Members
 
 Ana Azevedo - 202108654
+Fernando Barros - 201910223
 Gabriel Ferreira - 202108722
 Leonor Filipe - 202204354
 Maria Rabelo - 202000130
