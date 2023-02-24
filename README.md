@@ -13,19 +13,21 @@ Maria Rabelo - 202000130
 # Product Name
 
 ## Vision Stament
-For [target customer]: general population
-Who [customer need to be solved]: save on food products
-The [product name]: 
-Is a [product category]: ecological
-That [benefits, unique selling points]: waste reduction, ecological, cheaper
-Unlike [competitor product]: too good to go
-Our product [main difference]: the consumer has the possibility to choose the
-foods close to the expiry date that he wants to consume and view the respective prices
+**For [target customer]**: general population
+**Who [customer need to be solved]**: save on food products
+**The [product name]**: Food Rescue
+**Is a [product category]**: ecological
+**That [benefits, unique selling points]**: waste reduction, ecological, cheaper
+**Unlike [competitor product]**: too good to go
+**Our product [main difference]**: the consumer has the possibility to choose the
+products close to the expiry date that wants to consume and view the respective prices
 
 ## Main Features
- - Feature 1 - List of foods that are close to their expiry date
- - Feature 2 - Visualization of the food prices
- - Feature 3 - 
+ - Feature 1 - Map of **nearby supermarkets**
+ - Feature 2 - List of **food products near expiration dates** in the selected supermarket and respective **prices**
+ - Feature 3 - **Price and expiry date filters**
+ - Feature 4 - **Bucket list**
+ - Feature 5 - List of **users' favorite supermarkets**
 
 ## Required API's
-- Student timetable from sigarra
+- Google Maps
