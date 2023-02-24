@@ -13,19 +13,19 @@
 # Food Rescue
 
 ## Vision Stament
-### For [target customer]:
+- **For [target customer]:**
 general population
-### Who [customer need to be solved]:
+- **Who [customer need to be solved]:**
 save on food products
-### The [product name]:
+- **The [product name]:**
 Food Rescue
-### Is a [product category]:
+- **Is a [product category]:**
 ecological
-### That [benefits, unique selling points]:
+- **That [benefits, unique selling points]:**
 waste reduction, ecological, cheaper
-### Unlike [competitor product]:
+- **That [benefits, unique selling points]:**
 too good to go
-### Our product [main difference]:
+- **Our product [main difference]:**
 the consumer has the possibility to choose the products close to the expiry date that wants to consume and view the respective prices
 
 ## Main Features
