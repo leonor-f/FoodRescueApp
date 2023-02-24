@@ -4,23 +4,29 @@
 
 ## Members
 
-Ana Azevedo - 202108654
-Fernando Barros - 201910223
-Gabriel Ferreira - 202108722
-Leonor Filipe - 202204354
-Maria Rabelo - 202000130
+- Ana Azevedo - 202108654
+- Fernando Barros - 201910223
+- Gabriel Ferreira - 202108722
+- Leonor Filipe - 202204354
+- Maria Rabelo - 202000130
 
 # Food Rescue
 
 ## Vision Stament
-**For [target customer]**: general population
-**Who [customer need to be solved]**: save on food products
-**The [product name]**: Food Rescue
-**Is a [product category]**: ecological
-**That [benefits, unique selling points]**: waste reduction, ecological, cheaper
-**Unlike [competitor product]**: too good to go
-**Our product [main difference]**: the consumer has the possibility to choose the
-products close to the expiry date that wants to consume and view the respective prices
+### For [target customer]:
+general population
+### Who [customer need to be solved]:
+save on food products
+### The [product name]:
+Food Rescue
+### Is a [product category]:
+ecological
+### That [benefits, unique selling points]:
+waste reduction, ecological, cheaper
+### Unlike [competitor product]:
+too good to go
+### Our product [main difference]:
+the consumer has the possibility to choose the products close to the expiry date that wants to consume and view the respective prices
 
 ## Main Features
  - Feature 1 - Map of **nearby supermarkets**
