@@ -1,6 +1,6 @@
 # 2LEIC09T3
 
-# Team name
+# FRs
 
 ## Members
 
@@ -10,7 +10,7 @@ Gabriel Ferreira - 202108722
 Leonor Filipe - 202204354
 Maria Rabelo - 202000130
 
-# Product Name
+# Food Rescue
 
 ## Vision Stament
 **For [target customer]**: general population
