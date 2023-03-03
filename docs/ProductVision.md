@@ -13,19 +13,21 @@
 # FoodRescue
 
 ## Vision Stament
-- **For [target customer]:**
+Application that brings together the various supermarkets in a nearby area and presents the food products close to expiry date and respective prices of the supermarket selected by the consumer.
+
+- **For:**
 general population
-- **Who [customer need to be solved]:**
+- **Who:**
 save on food products
-- **The [product name]:**
+- **The:**
 Food Rescue
-- **Is a [product category]:**
+- **Is a:**
 ecological
-- **That [benefits, unique selling points]:**
+- **That:**
 waste reduction, ecological, cheaper
-- **That [benefits, unique selling points]:**
+- **That:**
 too good to go
-- **Our product [main difference]:**
+- **Our product:**
 the consumer has the possibility to choose the products close to the expiry date that wants to consume and view the respective prices
 
 ## Main Features
