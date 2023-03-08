@@ -34,7 +34,7 @@ the consumer has the possibility to choose the products close to the expiry date
  - Feature 1 - Map of **nearby supermarkets**
  - Feature 2 - List of **food products near expiration dates** in the selected supermarket and respective **prices**
  - Feature 3 - **Price and expiry date filters**
- - Feature 4 - **Bucket list**
+ - Feature 4 - Select all **user's favorite items** and **store them in a list**
  - Feature 5 - List of **users' favorite supermarkets**
 
 ## Required API's
