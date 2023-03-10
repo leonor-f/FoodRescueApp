@@ -13,22 +13,11 @@
 # FoodRescue
 
 ## Vision Stament
-Application that brings together the various supermarkets in a nearby area and presents the food products close to expiry date and respective prices of the supermarket selected by the consumer.
+Food Rescue brings together various supermarkets in a nearby area and presents the food products close to expiration date and respective prices of the supermarket selected by the consumer.
 
-- **For:**
-general population
-- **Who:**
-save on food products
-- **The:**
-Food Rescue
-- **Is a:**
-ecological
-- **That:**
-waste reduction, ecological, cheaper
-- **That:**
-too good to go
-- **Our product:**
-the consumer has the possibility to choose the products close to the expiry date that wants to consume and view the respective prices
+This Application is made for everyone that is interested in saving money while helping the environment, contributing to decrease the food waste.
+
+Unlike "Too good to go", with our product the consumer has the possibility to choose the products close to the expiration date, viewing the respective prices, while knowing exacly what is buying
 
 ## Main Features
  - Feature 1 - Map of **nearby supermarkets**
