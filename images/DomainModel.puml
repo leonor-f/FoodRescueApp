@@ -1,0 +1,73 @@
+@startuml
+
+class User {
+    -name: string
+    -favMarkets: List<Market>
+    -location: Location
+    -favItems: List<Product>
+}
+
+class Product {
+    -productID: string
+    -name: string
+    -quantity: int
+    -price: double
+    -expirationDate: Date
+    -available: bool
+    +isAvailable()
+}
+
+class Category {
+    -name: string
+}
+
+class Vegetables {
+}
+
+class Fruits {
+}
+
+class Fats {
+}
+
+class Dairy { /' laticinios '/
+}
+
+class MeatFishEggs {
+}
+
+class Carbs {
+}
+
+class Drinks {
+}
+
+class Location {
+    -coordinates: string
+    /' -latitude: int
+    -longitude: int '/
+}
+
+class Market {
+    -marketID: string
+    -name: string
+}
+
+User"1" --> "*" Product: favorite >
+User "1" --> "*" Location: has >
+User "1" --> "*" Market: favorite >
+Location "1" --> "*" Market: has >
+Market "1" --> "*" Product: has >
+Product "1" --> "1" Category: has >
+Vegetables --|> Category: is a
+Fruits --|> Category: is a
+Fats --|> Category: is a
+Dairy --|> Category: is a
+MeatFishEggs --|> Category: is a
+Carbs --|> Category: is a
+Drinks --|> Category: is a
+
+' ...>
+' ..|> : implements
+
+@enduml
