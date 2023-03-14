@@ -1,39 +1,31 @@
-
 ## Architecture and Design
-The architecture of a software system encompasses the set of key decisions about its overall organization. 
-
-A well written architecture document is brief but reduces the amount of time it takes new programmers to a project to understand the code to feel able to make modifications and enhancements.
-
-To document the architecture requires describing the decomposition of the system in their parts (high-level components) and the key behaviors and collaborations between them. 
-
-In this section you should start by briefly describing the overall components of the project and their interrelations. You should also describe how you solved typical problems you may have encountered, pointing to well-known architectural and design patterns, if applicable.
 
 ### Logical architecture
-The purpose of this subsection is to document the high-level logical structure of the code (Logical View), using a UML diagram with logical packages, without the worry of allocating to components, processes or machines.
+![LogicalView](https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/images/LogicalView.png)
 
-It can be beneficial to present the system both in a horizontal or vertical decomposition:
-* horizontal decomposition may define layers and implementation concepts, such as the user interface, business logic and concepts; 
-* vertical decomposition can define a hierarchy of subsystems that cover all layers of implementation.
+- `Food Rescue UI`: visualize application pages
+- `Food Rescue Database`: database with the supermarkets info (name and address) and respective food products
+- `Food Rescue Business Logic`: handles all information provided by the users of the app
+- `Google Maps API and Google Directions API`: locate supermarkets near the user through the user's coordinates
+- `Google Sheets API`: register application database
 
-Example of _UML package diagram_ showing a _logical view_ of the Eletronic Ticketing System (to be accompanied by a short description of each package):
-
-![LogicalView](https://user-images.githubusercontent.com/9655877/160585416-b1278ad7-18d7-463c-b8c6-afa4f7ac7639.png)
 
 ### Physical architecture
-The goal of this subsection is to document the high-level physical structure of the software system (machines, connections, software components installed, and their dependencies) using UML deployment diagrams (Deployment View) or component diagrams (Implementation View), separate or integrated, showing the physical structure of the system.
+Our app's physical architecture diagram features three nodes, representing the devices involved in the project and the connections between them.
 
-It should describe also the technologies considered and justify the selections made. Examples of technologies relevant for uni4all are, for example, frameworks for mobile applications (such as Flutter).
+The user's **Mobile Device** node, where the app will be installed, includes the Food Rescue app developed in Dart and the device's internal storage,
+essential to store the user's personal info (favorite supermarkets and bucket list).
 
-Example of _UML deployment diagram_ showing a _deployment view_ of the Eletronic Ticketing System (please notice that, instead of software components, one should represent their physical/executable manifestations for deployment, called artifacts in UML; the diagram should be accompanied by a short description of each node and artifact):
+The **Food Rescue Server** node runs the backend of the Food Rescue app, being the interface between the other 2 nodes. It manages the information
+stored in the databases so it can be updated whenever necessary (adding / removing favorite supermarkets from the Stores Database, adding / removing
+items from the Products Database, and updating new products depending on their availability in the supermarket in the Products Database). It also stores
+the user's current location (information received from the Google Server node), necessary to execute the user's requests.
 
-![DeploymentView](https://user-images.githubusercontent.com/9655877/160592491-20e85af9-0758-4e1e-a704-0db1be3ee65d.png)
+The **Google Server** node locates the user spatially through the Google Maps and Google Directions APIs, and stores the data necessary for the services
+in the Google Sheets API.
 
+![DeploymentView](https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/images/DeploymentView.png)
 
 
 ### Vertical prototype
-To help on validating all the architectural, design and technological decisions made, we usually implement a vertical prototype, a thin vertical slice of the system.
-
-In this subsection please describe which feature you have implemented, and how, together with a snapshot of the user interface, if applicable.
-
-At this phase, instead of a complete user story, you can simply implement a feature that demonstrates thay you can use the technology, for example, show a screen with the app credits (name and authors).
-
+describe which feature you have implemented, and how, together with a snapshot of the user interface.
