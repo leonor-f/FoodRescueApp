@@ -1,6 +1,6 @@
 {
-    "name": "food_rescue_project",
-    "short_name": "food_rescue_project",
+    "name": "food_rescue",
+    "short_name": "food_rescue",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

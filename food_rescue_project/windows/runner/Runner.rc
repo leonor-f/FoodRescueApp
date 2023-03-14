@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "food_rescue_project" "\0"
+            VALUE "FileDescription", "food_rescue" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "food_rescue_project" "\0"
+            VALUE "InternalName", "food_rescue" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "food_rescue_project.exe" "\0"
-            VALUE "ProductName", "food_rescue_project" "\0"
+            VALUE "OriginalFilename", "food_rescue.exe" "\0"
+            VALUE "ProductName", "food_rescue" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
