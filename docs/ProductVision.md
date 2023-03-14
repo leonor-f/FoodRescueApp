@@ -28,3 +28,4 @@ Unlike "Too good to go", with our product the consumer has the possibility to ch
 
 ## Required API's
 - Google Maps
+- Google Sheets
