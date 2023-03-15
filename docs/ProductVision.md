@@ -1,5 +1,3 @@
-# 2LEIC09T3
-
 # FRs
 
 ## Members
@@ -10,7 +8,7 @@
 - Leonor Filipe - 202204354
 - Maria Rabelo - 202000130
 
-# FoodRescue
+# Food Rescue
 
 ## Vision Stament
 Food Rescue brings together various supermarkets in a nearby area and presents the food products close to expiration date and respective prices of the supermarket selected by the consumer.
