@@ -12,7 +12,7 @@
 
 ## Vision Stament
 
-Food Rescue brings together various supermarkets in a nearby area and presents the food products nearing expiration date and respective prices of the supermarket chosen by the consumer. This Application is designed for anyone who wants to save money while helping the environment by reducing food waste.
+Food Rescue brings together various supermarkets in a nearby area and presents the food products nearing expiration date and respective prices from the supermarket chosen by the consumer. This Application is designed for anyone who wants to save money while helping the environment by reducing food waste.
 
 ## Main Features
  - Feature 1 - Map of **nearby supermarkets**
