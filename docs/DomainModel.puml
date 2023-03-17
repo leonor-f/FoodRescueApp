@@ -18,28 +18,7 @@ class Product {
 }
 
 class Category {
-    -name: string
-}
-
-class Vegetables {
-}
-
-class Fruits {
-}
-
-class Fats {
-}
-
-class Dairy { /' laticinios '/
-}
-
-class MeatFishEggs {
-}
-
-class Carbs {
-}
-
-class Drinks {
+    -code: string
 }
 
 class Location {
@@ -58,7 +37,7 @@ class MarketChain {
 
 User "1" --> "*" Product: favorite >
 User "1" --> "1" Location: has >
-User "1" --> "*" Market: favorite >
+User "*" --> "*" Market: favorite >
 Location "1" --> "1" Market: has <
 Market "1" --> "*" Product: has >
 Product "1" --> "1" Category: has >
