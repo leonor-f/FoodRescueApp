@@ -4,9 +4,9 @@
     minSdkVersion="20"
     targetSdkVersion="33"
     shrinking="true"
-    mergedManifest="C:\Users\Utilizador\Desktop\Nova pasta (2)\2LEIC09T3\foodrescue\build\app\intermediates\merged_manifest\release\AndroidManifest.xml"
-    proguardFiles="C:\Users\Utilizador\Desktop\Nova pasta (2)\2LEIC09T3\foodrescue\build\app\intermediates\default_proguard_files\global\proguard-android.txt-7.2.0;C:\flutter\packages\flutter_tools\gradle\flutter_proguard_rules.pro;proguard-rules.pro"
-    partialResultsDir="C:\Users\Utilizador\Desktop\Nova pasta (2)\2LEIC09T3\foodrescue\build\app\intermediates\lint_vital_partial_results\release\out">
+    mergedManifest="C:\Users\anaso\OneDrive\Ambiente de Trabalho\Cadeiras 2022\2 semestre\Engenharia de Software\foodrescue\build\app\intermediates\merged_manifest\release\AndroidManifest.xml"
+    proguardFiles="C:\Users\anaso\OneDrive\Ambiente de Trabalho\Cadeiras 2022\2 semestre\Engenharia de Software\foodrescue\build\app\intermediates\default_proguard_files\global\proguard-android.txt-7.2.0;C:\Users\anaso\OneDrive\Ambiente de Trabalho\Cadeiras 2022\flutter\packages\flutter_tools\gradle\flutter_proguard_rules.pro;proguard-rules.pro"
+    partialResultsDir="C:\Users\anaso\OneDrive\Ambiente de Trabalho\Cadeiras 2022\2 semestre\Engenharia de Software\foodrescue\build\app\intermediates\lint_vital_partial_results\release\out">
   <buildFeatures
       namespacing="REQUIRED"/>
   <sourceProviders>
@@ -31,9 +31,9 @@
         value="android.app.Application" />
   </manifestPlaceholders>
   <mainArtifact
-      classOutputs="C:\Users\Utilizador\Desktop\Nova pasta (2)\2LEIC09T3\foodrescue\build\app\intermediates\javac\release\classes;C:\Users\Utilizador\Desktop\Nova pasta (2)\2LEIC09T3\foodrescue\build\app\tmp\kotlin-classes\release;C:\Users\Utilizador\Desktop\Nova pasta (2)\2LEIC09T3\foodrescue\build\app\kotlinToolingMetadata;C:\Users\Utilizador\Desktop\Nova pasta (2)\2LEIC09T3\foodrescue\build\app\intermediates\compile_and_runtime_not_namespaced_r_class_jar\release\R.jar"
+      classOutputs="C:\Users\anaso\OneDrive\Ambiente de Trabalho\Cadeiras 2022\2 semestre\Engenharia de Software\foodrescue\build\app\intermediates\javac\release\classes;C:\Users\anaso\OneDrive\Ambiente de Trabalho\Cadeiras 2022\2 semestre\Engenharia de Software\foodrescue\build\app\tmp\kotlin-classes\release;C:\Users\anaso\OneDrive\Ambiente de Trabalho\Cadeiras 2022\2 semestre\Engenharia de Software\foodrescue\build\app\kotlinToolingMetadata;C:\Users\anaso\OneDrive\Ambiente de Trabalho\Cadeiras 2022\2 semestre\Engenharia de Software\foodrescue\build\app\intermediates\compile_and_runtime_not_namespaced_r_class_jar\release\R.jar"
       applicationId="com.example.foodrescue"
-      generatedSourceFolders="C:\Users\Utilizador\Desktop\Nova pasta (2)\2LEIC09T3\foodrescue\build\app\generated\source\buildConfig\release;C:\Users\Utilizador\Desktop\Nova pasta (2)\2LEIC09T3\foodrescue\build\app\generated\aidl_source_output_dir\release\out;C:\Users\Utilizador\Desktop\Nova pasta (2)\2LEIC09T3\foodrescue\build\app\generated\renderscript_source_output_dir\release\out;C:\Users\Utilizador\Desktop\Nova pasta (2)\2LEIC09T3\foodrescue\build\app\generated\ap_generated_sources\release\out"
-      generatedResourceFolders="C:\Users\Utilizador\Desktop\Nova pasta (2)\2LEIC09T3\foodrescue\build\app\generated\res\rs\release;C:\Users\Utilizador\Desktop\Nova pasta (2)\2LEIC09T3\foodrescue\build\app\generated\res\resValues\release">
+      generatedSourceFolders="C:\Users\anaso\OneDrive\Ambiente de Trabalho\Cadeiras 2022\2 semestre\Engenharia de Software\foodrescue\build\app\generated\source\buildConfig\release;C:\Users\anaso\OneDrive\Ambiente de Trabalho\Cadeiras 2022\2 semestre\Engenharia de Software\foodrescue\build\app\generated\aidl_source_output_dir\release\out;C:\Users\anaso\OneDrive\Ambiente de Trabalho\Cadeiras 2022\2 semestre\Engenharia de Software\foodrescue\build\app\generated\renderscript_source_output_dir\release\out;C:\Users\anaso\OneDrive\Ambiente de Trabalho\Cadeiras 2022\2 semestre\Engenharia de Software\foodrescue\build\app\generated\ap_generated_sources\release\out"
+      generatedResourceFolders="C:\Users\anaso\OneDrive\Ambiente de Trabalho\Cadeiras 2022\2 semestre\Engenharia de Software\foodrescue\build\app\generated\res\rs\release;C:\Users\anaso\OneDrive\Ambiente de Trabalho\Cadeiras 2022\2 semestre\Engenharia de Software\foodrescue\build\app\generated\res\resValues\release">
   </mainArtifact>
 </variant>

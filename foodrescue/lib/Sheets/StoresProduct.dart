@@ -25,8 +25,6 @@ class GoogleSheetsApi {
 
   //some variables
   static String supermarket = '';
-  static double latitude = 0;
-  static double longitude = 0;
   static String favourite = 'sim';
   static int numberOfStores = 0;
   static List<List<dynamic>> currentFavoriteStores = [];
@@ -60,12 +58,12 @@ class GoogleSheetsApi {
       sleep(const Duration(seconds: 3));
       final String isFavorite =
           await _worksheet!.values.value(column: 5, row: i + 1);
+      final String storeImage =
+          await _worksheet!.values.value(column: 6, row: i + 1);
 
       if (currentFavoriteStores.length < numberOfStores &&
           favourite == isFavorite) {
-        currentFavoriteStores.add([
-          storeName,
-        ]);
+        currentFavoriteStores.add([storeName, storeImage]);
       }
     }
     // this will stop the circular loading indicator

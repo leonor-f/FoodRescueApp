@@ -4,7 +4,7 @@
             "outputFile": "com.example.foodrescue.app-mergeReleaseResources-12:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Utilizador\\Desktop\\Nova pasta (2)\\2LEIC09T3\\foodrescue\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "C:\\Users\\anaso\\OneDrive\\Ambiente de Trabalho\\Cadeiras 2022\\2 semestre\\Engenharia de Software\\foodrescue\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:foodrescue/Sheets/StoresProduct.dart';
-import 'TopCard.dart';
+import 'FavoriteTopCard.dart';
 import 'FavoriteStores.dart';
 
 class FavoritesPage extends StatefulWidget {
@@ -51,6 +51,8 @@ class _FavoritesPageState extends State<FavoritesPage> {
                               return FavoriteStores(
                                 storeName: GoogleSheetsApi
                                     .currentFavoriteStores[index][0],
+                                storeImage: GoogleSheetsApi
+                                    .currentFavoriteStores[index][1],
                               );
                             }))
                   ],
