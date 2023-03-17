@@ -28,24 +28,22 @@ in the Google Sheets API.
 
 
 ### Vertical prototype
-#### Feature 1 - Bottom search bar
+
+#### Features
+##### Feature 1 - Bottom search bar
 In the first feature, we decided to implement a search bar at the bottom, with all the different pages of our app.
 We created different pages in separate files to organize our code. Each item on the search bar opens a different page.
 
-https://user-images.githubusercontent.com/93678161/225099617-208a8255-317e-4ff9-a39f-c35b965f1481.mp4
-
-#### Feature 2 - Sheets x Flutter
+##### Feature 2 - Sheets x Flutter
 Since we needed to access the data of the different supermarkets and respective products in a database, we decided
 to implement the Google Sheets API to store these information. By doing this, we were able to obtain a prototype of
 how the user's favorite supermarkets page will look like. Whenever a supermarket is marked as favorite, it appears
 on the app's "Favoritos" page, as shown below.
 
-https://user-images.githubusercontent.com/93678161/225102720-96e76b01-2724-47a6-a373-bc4a801d041a.mp4
-
-![f2](https://user-images.githubusercontent.com/93678161/225103043-5910a1b7-94e8-4555-9fad-f6c5bceccf89.png)
-
-#### Feature 3 - Maps x Flutter
+##### Feature 3 - Maps x Flutter
 Since we also needed to use a map in one of the main pages of the project, so that the user can visualize the
 supermarkets nearby, we decided to already implement the Google Maps API, as shown below on the "Lojas" page.
 
-![f3](https://user-images.githubusercontent.com/93678161/225103816-7987fc53-eb12-4f3e-a0c3-97ce18b920fe.png)
+
+
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/93678161/226060412-1b9d09eb-84fb-49c1-8da8-b98fd5425242.gif)  |  ![f3](https://user-images.githubusercontent.com/93678161/225103816-7987fc53-eb12-4f3e-a0c3-97ce18b920fe.png)  |  ![f2](https://user-images.githubusercontent.com/93678161/225103043-5910a1b7-94e8-4555-9fad-f6c5bceccf89.png)
