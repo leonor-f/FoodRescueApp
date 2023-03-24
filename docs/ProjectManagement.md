@@ -5,7 +5,7 @@ You can find below information and references related with the project managemen
 * Backlog management: Product backlog and Iteration backlog in a [Github Projects board](https://github.com/orgs/FEUP-LEIC-ES-2022-23/projects/34)
 * Release management:
     * [v0](#)
-    * [v1](##)
+    * [v1](#)
     * [v2]
     * [v3]
 
@@ -30,7 +30,7 @@ We developed a small part of some functionalities and tested the databases, as w
 manage the technologies necessary for the development of the project in the next iterations and adapt our
 plan, if necessary. We also achieved the intended design of the app in the prototype.
 
-### Iteration ##1
+### Iteration #1
 
 #### Iteration planning
 - Start of iteration:
