@@ -5,7 +5,7 @@ You can find below information and references related with the project managemen
 * Backlog management: Product backlog and Iteration backlog in a [Github Projects board](https://github.com/orgs/FEUP-LEIC-ES-2022-23/projects/34)
 * Release management:
     * [v0](#)
-    * [v1]
+    * [v1](##)
     * [v2]
     * [v3]
 
