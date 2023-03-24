@@ -34,7 +34,9 @@ plan, if necessary. We also achieved the intended design of the app in the proto
 
 #### Iteration planning
 - Start of iteration:
-
+<p align="center" justify="center">
+  <img src="https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/images/start_v1.PNG"/>
+</p>
 
 - End of iteration:
 
