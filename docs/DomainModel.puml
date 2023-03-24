@@ -36,18 +36,11 @@ class MarketChain {
 }
 
 User "1" --> "*" Product: favorite >
-User "1" --> "1" Location: has >
+User "1" -> "1" Location: has >
 User "*" --> "*" Market: favorite >
 Location "1" --> "1" Market: has <
 Market "1" --> "*" Product: has >
 Product "1" --> "1" Category: has >
-Vegetables --|> Category: is a
-Fruits --|> Category: is a
-Fats --|> Category: is a
-Dairy --|> Category: is a
-MeatFishEggs --|> Category: is a
-Carbs --|> Category: is a
-Drinks --|> Category: is a
 Market --|> MarketChain: belongs to
 
 ' ...>
