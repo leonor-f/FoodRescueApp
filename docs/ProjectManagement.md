@@ -29,3 +29,19 @@ and architecture and design).
 We developed a small part of some functionalities and tested the databases, as well as the maps to better
 manage the technologies necessary for the development of the project in the next iterations and adapt our
 plan, if necessary. We also achieved the intended design of the app in the prototype.
+
+### Iteration ##1
+
+#### Iteration planning
+- Start of iteration:
+
+
+- End of iteration:
+
+#### Iteration retrospectives
+
+
+
+
+
+
