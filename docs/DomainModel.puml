@@ -12,13 +12,25 @@ class Product {
     -name: string
     -quantity: int
     -price: double
+    -discount: double
     -expirationDate: Date
     -available: bool
+    -favorite: bool
     +isAvailable(): bool
 }
 
 class Category {
     -code: string
+}
+
+enum Categories {
+    Vegetables
+    Fruits
+    Fats
+    Dairy
+    MeatFishEggs
+    Carbs
+    Drinks
 }
 
 class Location {
@@ -27,11 +39,15 @@ class Location {
 }
 
 class Market {
+    -marketID: string
     -name: string
     -location: Location
+    -favorite: bool
+    -image: string
 }
 
 class MarketChain {
+    -marketChainID: string
     -name: string
 }
 
@@ -42,6 +58,7 @@ Location "1" --> "1" Market: has <
 Market "1" --> "*" Product: has >
 Product "1" --> "1" Category: has >
 Market --|> MarketChain: belongs to
+Category -> Categories
 
 ' ...>
 ' ..|> : implements
