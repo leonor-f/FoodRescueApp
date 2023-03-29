@@ -1,42 +1,67 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:foodrescue/Sheets/StoresProduct.dart';
+import 'BucketTopCard.dart';
+import 'BucketProducts.dart';
 
-class FavoriteProducts extends StatelessWidget {
-  final String productName;
+class BucketPage extends StatefulWidget {
+  const BucketPage({Key? key}) : super(key: key);
 
-  FavoriteProducts({required this.productName});
+  @override
+  _BucketPageState createState() => _BucketPageState();
+}
+
+class _BucketPageState extends State<BucketPage> {
+  bool timerHasStarted = false;
+  void setStateIfMounted(f) {
+    if (mounted) setState(f);
+  }
+
+  void startLoading() {
+    timerHasStarted = true;
+    Timer.periodic(Duration(seconds: 1), (timer) {
+      if (GoogleSheetsApi.loading == false) {
+        setStateIfMounted(() {});
+        timer.cancel();
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 15, right: 15, bottom: 15),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
-        child: Container(
-            padding: EdgeInsets.only(left: 20, top: 20, right: 20, bottom: 20),
-            color: Color.fromRGBO(188, 222, 228, 0.7),
-            height: 130,
-            width: 360,
-            child: Row(
-              children: [
-                Container(
-                  height: 90,
-                  width: 90,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      )),
-                ),
-                Column(
+    if (GoogleSheetsApi.loading == true && timerHasStarted == false) {
+      startLoading();
+    }
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Column(
+        children: [
+          TopCard(),
+          Expanded(
+            child: Container(
+              child: Center(
+                child: Column(
                   children: [
-                    Container(
-                      padding: EdgeInsets.only(left: 15, top: 10),
-                      child: Text(
-                        productName,
-                        style: TextStyle(
-                          color: Color.fromRGBO(52, 93, 100, 1),
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 30,
-                    ),
+                    Expanded(
+                        child: ListView.builder(
+                            itemCount:
+                                GoogleSheetsApi.currentFavoriteProducts.length,
+                            itemBuilder: (context, index) {
+                              return FavoriteProducts(
+                                productName: GoogleSheetsApi
+                                    .currentFavoriteProducts[index][0],
+                                productPrice: GoogleSheetsApi
+                                    .currentFavoriteProducts[index][1],
+                              );
+                            }))
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

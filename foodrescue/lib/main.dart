@@ -5,6 +5,7 @@ import 'Screens/ProductsPage.dart';
 import 'Screens/StoresPage/StoresPage.dart';
 import 'Sheets/StoresProduct.dart';
 import 'Screens/StoresPage/GoogleMaps.dart';
+import 'Screens/BucketListPage/BucketPage.dart';
 
 void main() {
   GoogleSheetsApi().init();
@@ -41,7 +42,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     MyMapPage(),
     ProductsPage(),
     FavoritesPage(),
-    ItemsPage(),
+    BucketPage(),
   ];
 
   void _onItemTapped(int index) {
