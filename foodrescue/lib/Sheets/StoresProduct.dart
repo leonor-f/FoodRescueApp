@@ -23,14 +23,14 @@ class GoogleSheetsApi {
   static final _spreadsheetId = '12rzuZUp6HtKArHAkBX3-Mjg9G2LiAHf4K5WJr5ihnLM';
   var _worksheet;
   var products_worksheet;
-  
+
   //some variables
   static String supermarket = '';
   static String favourite = 'sim';
   static int numberOfStores = 0;
   static List<List<dynamic>> currentFavoriteStores = [];
   static bool loading = true;
-  
+
   static String produto = '';
   static int numberOfProducts = 0;
   static List<List<dynamic>> currentFavoriteProducts = [];
@@ -78,11 +78,11 @@ class GoogleSheetsApi {
     // this will stop the circular loading indicator
     loading = false;
   }
-  
+
   static Future countProductRows(products_worksheet) async {
-    while (
-        (await products_worksheet.values.value(column: 1, row: numberOfProducts + 1)) !=
-            '') {
+    while ((await products_worksheet.values
+            .value(column: 1, row: numberOfProducts + 1)) !=
+        '') {
       numberOfProducts++;
     }
 
@@ -94,12 +94,12 @@ class GoogleSheetsApi {
 
     for (int i = 1; i < numberOfProducts; i++) {
       final String ProductName =
-          await products_worksheet!.values.value(column: 2, row: i + 1);
+          await products_worksheet!.values.value(column: 3, row: i + 1);
       sleep(const Duration(seconds: 3));
       final String isFavorite =
           await products_worksheet!.values.value(column: 9, row: i + 1);
       final double ProductPrice =
-          await products_worksheet!.values.value(column: 6, row: i + 1);
+          await products_worksheet!.values.value(column: 5, row: i + 1);
 
       if (currentFavoriteProducts.length < numberOfProducts &&
           favourite == isFavorite) {
