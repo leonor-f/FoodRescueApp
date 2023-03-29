@@ -40,6 +40,8 @@ plan, if necessary. We also achieved the intended design of the app in the proto
 
 - End of iteration:
 
+![svdsv](https://user-images.githubusercontent.com/93678161/228670025-9749de5e-87ad-436b-bcdc-e568fdbbd288.png)
+
 #### Iteration retrospectives
 
 
