@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 
 class FavoriteProducts extends StatelessWidget {
   final String productName;
-  // final double productPrice;
+  final String productPrice;
 
-  FavoriteProducts({required this.productName});
+  FavoriteProducts({required this.productName, required this.productPrice});
+  // {
+  //   print('productName: $productName');
+  // print('productPrice: $productPrice');
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -17,33 +21,37 @@ class FavoriteProducts extends StatelessWidget {
             color: Color.fromRGBO(188, 222, 228, 0.7),
             height: 130,
             width: 360,
-            child: Row(
+            child: Stack(
               children: [
                 Container(
-                  height: 90,
-                  width: 90,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    
-                  ),
-                ),
-                Column(
-                  children: [
-                    Container(
-                      padding: EdgeInsets.only(left: 15, top: 10),
-                      child: Text(
-                        productName,
-                        style: TextStyle(
-                          color: Color.fromRGBO(52, 93, 100, 1),
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                    height: 90,
+                    width: 90,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
                     ),
-                    SizedBox(
-                      height: 30,
-                    ),
-                  ],
-                )
+                    child: Center(
+                        child: Text(productPrice,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            )))),
+                Positioned(
+                    left: 100,
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Text(
+                            productName,
+                            style: TextStyle(
+                              color: Color.fromRGBO(52, 93, 100, 1),
+                              fontWeight: FontWeight.bold,
+                            ),
+                          )
+                        ]))
               ],
             )),
       ),
