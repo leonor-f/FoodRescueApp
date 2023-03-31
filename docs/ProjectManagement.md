@@ -43,9 +43,15 @@ plan, if necessary. We also achieved the intended design of the app in the proto
 ![svdsv](https://user-images.githubusercontent.com/93678161/228670025-9749de5e-87ad-436b-bcdc-e568fdbbd288.png)
 
 #### Iteration retrospectives
+In this iteration, two of the three user stories that were scheduled to be completed have been successfully completed, and one that wasn't initially intended was deemed valuable and appropriate to complete as well.
+We can already see the app taking shape as some functionalities are being added.
+
+### Iteration #2
+
+#### Iteration planning
+- Start of iteration:
 
 
-
-
+- End of iteration:
 
 
