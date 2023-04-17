@@ -1,8 +1,9 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'BucketTopCard.dart';
 import 'BucketProducts.dart';
+import 'package:food_rescue/services/ProductsDatabaseManager.dart';
+import 'package:food_rescue/models/products.dart';
 
 class BucketPage extends StatefulWidget {
   const BucketPage({Key? key}) : super(key: key);
@@ -12,26 +13,31 @@ class BucketPage extends StatefulWidget {
 }
 
 class _BucketPageState extends State<BucketPage> {
-  bool timerHasStarted = false;
-  void setStateIfMounted(f) {
-    if (mounted) setState(f);
+  late List<Product> markets = [];
+  bool isLoading = false;
+
+  @override
+  void initState() {
+    super.initState();
+
+    refreshProducts();
   }
 
-  void startLoading() {
-    timerHasStarted = true;
-    Timer.periodic(Duration(seconds: 1), (timer) {
-      if (GoogleSheetsApi.loading == false) {
-        setStateIfMounted(() {});
-        timer.cancel();
-      }
-    });
+  @override
+  void dispose() {
+    ProductDatabaseManager.instance.close();
+
+    super.dispose();
+  }
+
+  Future refreshProducts() async {
+    setState(() => isLoading = true);
+    this.markets = await ProductDatabaseManager.instance.readAllProducts();
+    setState(() => isLoading = false);
   }
 
   @override
   Widget build(BuildContext context) {
-    if (GoogleSheetsApi.loading == true && timerHasStarted == false) {
-      startLoading();
-    }
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
@@ -44,14 +50,26 @@ class _BucketPageState extends State<BucketPage> {
                   children: [
                     Expanded(
                         child: ListView.builder(
-                            itemCount:
-                                GoogleSheetsApi.currentFavoriteProducts.length,
+                            itemCount: ProductDatabaseManager
+                                .currentFavoriteItems.length,
                             itemBuilder: (context, index) {
                               return FavoriteProducts(
-                                productName: GoogleSheetsApi
-                                    .currentFavoriteProducts[index][0],
-                                productPrice: GoogleSheetsApi
-                                    .currentFavoriteProducts[index][1],
+                                productDescription: ProductDatabaseManager
+                                    .currentFavoriteItems[index][0],
+                                productCategory: ProductDatabaseManager
+                                    .currentFavoriteItems[index][1],
+                                productImage: ProductDatabaseManager
+                                    .currentFavoriteItems[index][2],
+                                oldPrice: ProductDatabaseManager
+                                    .currentFavoriteItems[index][3],
+                                newPrice: ProductDatabaseManager
+                                    .currentFavoriteItems[index][4],
+                                expirationDate: ProductDatabaseManager
+                                    .currentFavoriteItems[index][5],
+                                marketName: ProductDatabaseManager
+                                    .currentFavoriteItems[index][6],
+                                product: ProductDatabaseManager
+                                    .currentFavoriteItems[index][7],
                               );
                             }))
                   ],
