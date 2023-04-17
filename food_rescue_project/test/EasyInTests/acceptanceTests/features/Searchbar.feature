@@ -8,7 +8,7 @@ Feature: Use search bar
   Scenario: Be able to see the products intended to be bought
     When I open the app
     And I tap the button that contais the text "Items"
-    The list of products that were added to the list of them that I want to buy is present with the name of the product, expiration date, supermarket name, icon and location.
+    Then the list of products that were added to the list of them that I want to buy is present with the name of the product, expiration date, supermarket name, icon and location.
     
   Scenario: Be able to access favorite supermarkets' page
     When I open the app
