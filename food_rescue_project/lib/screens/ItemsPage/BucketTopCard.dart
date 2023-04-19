@@ -14,7 +14,7 @@ class TopCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Text(
-              'O seu cesto de compras',
+              'Produtos que planeia comprar',
               style: TextStyle(
                 color: Color.fromRGBO(52, 93, 100, 1),
                 fontSize: 20,

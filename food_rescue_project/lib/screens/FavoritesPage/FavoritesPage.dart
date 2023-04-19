@@ -1,38 +1,41 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:food_rescue/Sheets/StoresProduct.dart';
+import 'package:food_rescue/services/MarketDatabaseManager.dart';
 import 'FavoriteTopCard.dart';
 import 'FavoriteStores.dart';
+import 'package:food_rescue/models/markets.dart';
 
 class FavoritesPage extends StatefulWidget {
-  const FavoritesPage({Key? key}) : super(key: key);
-
   @override
   _FavoritesPageState createState() => _FavoritesPageState();
 }
 
 class _FavoritesPageState extends State<FavoritesPage> {
-  bool timerHasStarted = false;
-  void setStateIfMounted(f) {
-    if (mounted) setState(f);
+  late List<Market> markets = [];
+  bool isLoading = false;
+
+  @override
+  void initState() {
+    super.initState();
+
+    refreshMarkets();
   }
 
-  void startLoading() {
-    timerHasStarted = true;
-    Timer.periodic(Duration(seconds: 1), (timer) {
-      if (GoogleSheetsApi.loading == false) {
-        setStateIfMounted(() {});
-        timer.cancel();
-      }
-    });
+  @override
+  void dispose() {
+    MarketDatabaseManager.instance.close();
+
+    super.dispose();
+  }
+
+  Future refreshMarkets() async {
+    setState(() => isLoading = true);
+    this.markets = await MarketDatabaseManager.instance.readAllMarkets();
+    setState(() => isLoading = false);
   }
 
   @override
   Widget build(BuildContext context) {
-    if (GoogleSheetsApi.loading == true && timerHasStarted == false) {
-      startLoading();
-    }
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(
@@ -45,14 +48,16 @@ class _FavoritesPageState extends State<FavoritesPage> {
                   children: [
                     Expanded(
                         child: ListView.builder(
-                            itemCount:
-                                GoogleSheetsApi.currentFavoriteStores.length,
+                            itemCount: MarketDatabaseManager
+                                .currentFavoriteStores.length,
                             itemBuilder: (context, index) {
                               return FavoriteStores(
-                                storeName: GoogleSheetsApi
+                                storeName: MarketDatabaseManager
                                     .currentFavoriteStores[index][0],
-                                storeImage: GoogleSheetsApi
+                                storeImage: MarketDatabaseManager
                                     .currentFavoriteStores[index][1],
+                                market: MarketDatabaseManager
+                                    .currentFavoriteStores[index][2],
                               );
                             }))
                   ],

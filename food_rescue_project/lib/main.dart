@@ -1,27 +1,19 @@
 import 'package:flutter/material.dart';
 import 'screens/FavoritesPage/FavoritesPage.dart';
-import 'screens/ItemsPage.dart';
 import 'screens/ProductsPage.dart';
 import 'screens/StoresPage.dart';
-import 'Sheets/StoresProduct.dart';
 import 'screens/ItemsPage/BucketPage.dart';
-//import 'package:food_rescue/services/database_helper.dart';
-//import 'package:food_rescue/models/user_model.dart';
 
 void main() async {
-  GoogleSheetsApi().init();
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  static const String _title = 'Flutter Code Sample';
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: _title,
       home: MyStatefulWidget(),
     );
   }
@@ -35,7 +27,8 @@ class MyStatefulWidget extends StatefulWidget {
 }
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  int _selectedIndex = 0;
+  static int _selectedIndex = 0;
+
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
 
