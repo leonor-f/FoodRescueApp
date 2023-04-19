@@ -11,7 +11,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-17',
       to_buy: 'sim',
       category: 'Laticínios e Ovos',
-      product_image: 'assets/images/continente.png',
+      product_image: 'assets/images/ovos.png',
+      store_image: 'assets/images/continente.png',
     ),
     Product(
       market_name: 'Continente Bom Dia Vale Formoso',
@@ -22,7 +23,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-17',
       to_buy: 'não',
       category: 'Frutas e Legumes',
-      product_image: 'assets/images/continente.png',
+      product_image: 'assets/images/salada.png',
+      store_image: 'assets/images/continente.png',
     ),
     Product(
       market_name: 'Continente Bom Dia Vale Formoso',
@@ -33,7 +35,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-19',
       to_buy: 'não',
       category: 'Frutas e Legumes',
-      product_image: 'assets/images/continente.png',
+      product_image: 'assets/images/sopa.png',
+      store_image: 'assets/images/continente.png',
     ),
     Product(
       market_name: 'Continente Bom Dia Via Catarina Shopping',
@@ -44,7 +47,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-18',
       to_buy: 'não',
       category: 'Frutas e Legumes',
-      product_image: 'assets/images/continente.png',
+      product_image: 'assets/images/sopa.png',
+      store_image: 'assets/images/continente.png',
     ),
     Product(
       market_name: 'Continente Bom Dia Via Catarina Shopping',
@@ -55,7 +59,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-16',
       to_buy: 'não',
       category: 'Peixaria e Talho',
-      product_image: 'assets/images/continente.png',
+      product_image: 'assets/images/frango.png',
+      store_image: 'assets/images/continente.png',
     ),
     Product(
       market_name: 'Continente Bom Dia Via Catarina Shopping',
@@ -66,7 +71,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-18',
       to_buy: 'não',
       category: 'Refeições Fáceis',
-      product_image: 'assets/images/continente.png',
+      product_image: 'assets/images/nuggets.png',
+      store_image: 'assets/images/continente.png',
     ),
     Product(
       market_name: 'Continente Bom Dia Via Catarina Shopping',
@@ -77,7 +83,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-16',
       to_buy: 'não',
       category: 'Frutas e Legumes',
-      product_image: 'assets/images/continente.png',
+      product_image: 'assets/images/salada.png',
+      store_image: 'assets/images/continente.png',
     ),
     Product(
         market_name: 'Continente Bom Dia Via Catarina Shopping',
@@ -88,7 +95,8 @@ class ProductsDatabase {
         expiration_date: '2023-05-18',
         to_buy: 'não',
         category: 'Refeições Fáceis',
-        product_image: 'assets/images/continente.png'),
+        product_image: 'assets/images/bacalhaubras.png',
+        store_image: 'assets/images/continente.png'),
     Product(
         market_name: 'Continente Bom Dia Asprela',
         product_description: 'Sopa de Espinafres 600gr',
@@ -98,7 +106,8 @@ class ProductsDatabase {
         expiration_date: '2023-05-20',
         to_buy: 'não',
         category: 'Frutas e Legumes',
-        product_image: 'assets/images/continente.png'),
+        product_image: 'assets/images/sopa.png',
+        store_image: 'assets/images/continente.png'),
     Product(
         market_name: 'Continente Bom Dia Asprela',
         product_description: 'Ovos Médios 6 unidades',
@@ -108,7 +117,8 @@ class ProductsDatabase {
         expiration_date: '2023-05-20',
         to_buy: 'não',
         category: 'Laticínios e Ovos',
-        product_image: 'assets/images/continente.png'),
+        product_image: 'assets/images/ovos.png',
+        store_image: 'assets/images/continente.png'),
     Product(
         market_name: 'Continente Bom Dia Asprela',
         product_description: 'Arroz de Pato 250gr',
@@ -118,7 +128,8 @@ class ProductsDatabase {
         expiration_date: '2023-05-20',
         to_buy: 'não',
         category: 'Refeições Fáceis',
-        product_image: 'assets/images/continente.png'),
+        product_image: 'assets/images/arrozpato.png',
+        store_image: 'assets/images/continente.png'),
     Product(
         market_name: 'Continente Bom Dia Asprela',
         product_description: 'Ovos Médios 6 unidades',
@@ -128,7 +139,8 @@ class ProductsDatabase {
         expiration_date: '2023-05-17',
         to_buy: 'não',
         category: 'Laticínios e Ovos',
-        product_image: 'assets/images/continente.png'),
+        product_image: 'assets/images/ovos.png',
+        store_image: 'assets/images/continente.png'),
     Product(
         market_name: 'Continente Bom Dia Asprela',
         product_description: 'Iogurtes s/ lactose banana 4 unidades',
@@ -138,7 +150,8 @@ class ProductsDatabase {
         expiration_date: '2023-05-20',
         to_buy: 'não',
         category: 'Laticínios e Ovos',
-        product_image: 'assets/images/continente.png'),
+        product_image: 'assets/images/iogurtes.png',
+        store_image: 'assets/images/continente.png'),
     Product(
       market_name: 'Continente Modelo Gaia (Rechousa)',
       product_description: 'Sopa de Agrião 600gr',
@@ -148,7 +161,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-18',
       to_buy: 'não',
       category: 'Frutas e Legumes',
-      product_image: 'assets/images/continente.png',
+      product_image: 'assets/images/sopa.png',
+      store_image: 'assets/images/continente.png',
     ),
     Product(
       market_name: 'Continente Modelo Gaia (Rechousa)',
@@ -159,7 +173,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-19',
       to_buy: 'não',
       category: 'Padaria e Pastelaria',
-      product_image: 'assets/images/continente.png',
+      product_image: 'assets/images/pao.png',
+      store_image: 'assets/images/continente.png',
     ),
     Product(
       market_name: 'Continente Modelo Gaia (Rechousa)',
@@ -170,7 +185,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-20',
       to_buy: 'não',
       category: 'Laticínios e Ovos',
-      product_image: 'assets/images/continente.png',
+      product_image: 'assets/images/ovos.png',
+      store_image: 'assets/images/continente.png',
     ),
     Product(
       market_name: 'Continente Modelo Gaia (Rechousa)',
@@ -181,7 +197,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-20',
       to_buy: 'sim',
       category: 'Laticínios e Ovos',
-      product_image: 'assets/images/continente.png',
+      product_image: 'assets/images/queijo.png',
+      store_image: 'assets/images/continente.png',
     ),
     Product(
       market_name: 'Continente Modelo Gaia (Rechousa)',
@@ -192,7 +209,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-20',
       to_buy: 'não',
       category: 'Peixaria e Talho',
-      product_image: 'assets/images/continente.png',
+      product_image: 'assets/images/frango.png',
+      store_image: 'assets/images/continente.png',
     ),
     Product(
       market_name: 'Brio Supermercado Biológico Picoas',
@@ -203,7 +221,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-16',
       to_buy: 'não',
       category: 'Refeições Fáceis',
-      product_image: 'assets/images/brio.png',
+      product_image: 'assets/images/nuggets.png',
+      store_image: 'assets/images/brio.png',
     ),
     Product(
       market_name: 'Brio Supermercado Biológico Picoas',
@@ -214,7 +233,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-21',
       to_buy: 'não',
       category: 'Frutas e Legumes',
-      product_image: 'assets/images/brio.png',
+      product_image: 'assets/images/salada.png',
+      store_image: 'assets/images/brio.png',
     ),
     Product(
       market_name: 'Brio Supermercado Biológico Picoas',
@@ -225,7 +245,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-21',
       to_buy: 'não',
       category: 'Laticínios e Ovos',
-      product_image: 'assets/images/brio.png',
+      product_image: 'assets/images/leite.png',
+      store_image: 'assets/images/brio.png',
     ),
     Product(
       market_name: 'Brio Supermercado Biológico Picoas',
@@ -236,7 +257,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-18',
       to_buy: 'não',
       category: 'Laticínios e Ovos',
-      product_image: 'assets/images/brio.png',
+      product_image: 'assets/images/queijo.png',
+      store_image: 'assets/images/brio.png',
     ),
     Product(
       market_name: 'Brio Supermercado Biológico Picoas',
@@ -247,7 +269,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-21',
       to_buy: 'não',
       category: 'Frutas e Legumes',
-      product_image: 'assets/images/brio.png',
+      product_image: 'assets/images/sopa.png',
+      store_image: 'assets/images/brio.png',
     ),
     Product(
       market_name: 'Brio Supermercado Biológico Picoas',
@@ -258,7 +281,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-20',
       to_buy: 'sim',
       category: 'Frutas e Legumes',
-      product_image: 'assets/images/brio.png',
+      product_image: 'assets/images/salada.png',
+      store_image: 'assets/images/brio.png',
     ),
     Product(
       market_name: 'Brio Supermercado Biológico Picoas',
@@ -269,7 +293,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-18',
       to_buy: 'não',
       category: 'Laticínios e Ovos',
-      product_image: 'assets/images/brio.png',
+      product_image: 'assets/images/leite.png',
+      store_image: 'assets/images/brio.png',
     ),
     Product(
       market_name: 'Brio Supermercado Biológico Picoas',
@@ -280,7 +305,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-17',
       to_buy: 'não',
       category: 'Laticínios e Ovos',
-      product_image: 'assets/images/brio.png',
+      product_image: 'assets/images/iogurtes.png',
+      store_image: 'assets/images/brio.png',
     ),
     Product(
       market_name: 'Apolónia Almancil',
@@ -291,7 +317,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-19',
       to_buy: 'não',
       category: 'Laticínios e Ovos',
-      product_image: 'assets/images/apolonia.jpg',
+      product_image: 'assets/images/queijo.png',
+      store_image: 'assets/images/apolonia.jpg',
     ),
     Product(
       market_name: 'Apolónia Almancil',
@@ -302,7 +329,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-19',
       to_buy: 'não',
       category: 'Laticínios e Ovos',
-      product_image: 'assets/images/apolonia.jpg',
+      product_image: 'assets/images/leite.png',
+      store_image: 'assets/images/apolonia.jpg',
     ),
     Product(
       market_name: 'Apolónia Almancil',
@@ -313,7 +341,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-19',
       to_buy: 'sim',
       category: 'Laticínios e Ovos',
-      product_image: 'assets/images/apolonia.jpg',
+      product_image: 'assets/images/ovos.png',
+      store_image: 'assets/images/apolonia.jpg',
     ),
     Product(
       market_name: 'Apolónia Lagoa',
@@ -324,7 +353,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-21',
       to_buy: 'não',
       category: 'Frutas e Legumes',
-      product_image: 'assets/images/apolonia.jpg',
+      product_image: 'assets/images/sopa.png',
+      store_image: 'assets/images/apolonia.jpg',
     ),
     Product(
       market_name: 'Apolónia Lagoa',
@@ -335,7 +365,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-16',
       to_buy: 'não',
       category: 'Refeições Fáceis',
-      product_image: 'assets/images/apolonia.jpg',
+      product_image: 'assets/images/gelatina.png',
+      store_image: 'assets/images/apolonia.jpg',
     ),
     Product(
       market_name: 'Apolónia Lagoa',
@@ -346,7 +377,8 @@ class ProductsDatabase {
       expiration_date: '2023-05-21',
       to_buy: 'não',
       category: 'Laticínios e Ovos',
-      product_image: 'assets/images/apolonia.jpg',
+      product_image: 'assets/images/iogurtes.png',
+      store_image: 'assets/images/apolonia.jpg',
     )
   ];
 }

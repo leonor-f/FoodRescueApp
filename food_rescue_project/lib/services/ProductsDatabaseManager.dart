@@ -6,6 +6,7 @@ import '../services/productsdb.dart';
 class ProductDatabaseManager {
   static String is_to_buy = 'sim';
   static List<List<dynamic>> currentFavoriteItems = [];
+  static List<List<dynamic>> allItems = [];
 
   static final ProductDatabaseManager instance = ProductDatabaseManager._init();
 
@@ -16,7 +17,7 @@ class ProductDatabaseManager {
   Future<Database> get database async {
     if (_database != null) return _database!;
 
-    _database = await _initDB('productsdatabase.db');
+    _database = await _initDB('productsDatabb.db');
     return _database!;
   }
 
@@ -43,7 +44,8 @@ class ProductDatabaseManager {
       ${ProductsFields.expiration_date} $textType,
       ${ProductsFields.to_buy} $textType,
       ${ProductsFields.category} $textType,
-      ${ProductsFields.product_image} $textType
+      ${ProductsFields.product_image} $textType,
+      ${ProductsFields.store_image} $textType
     )
     ''');
 
@@ -92,17 +94,33 @@ class ProductDatabaseManager {
       final String expiration_date = products[i].expiration_date;
       final double old_price = products[i].old_price;
       final double new_price = products[i].new_price;
+      final double quantity = products[i].quantity;
+      final String store_image = products[i].store_image;
+
+      allItems.add([
+        product_description,
+        category,
+        product_image,
+        old_price,
+        new_price,
+        expiration_date,
+        market_name,
+        quantity,
+        products[i],
+        store_image,
+      ]);
 
       if (is_to_buy == to_buy) {
         currentFavoriteItems.add([
           product_description,
           category,
-          product_image,
+          store_image,
           old_price,
           new_price,
           expiration_date,
           market_name,
-          products[i]
+          products[i],
+          product_image,
         ]);
       }
     }
@@ -131,7 +149,8 @@ class ProductDatabaseManager {
         expiration_date: product.expiration_date,
         to_buy: 'não',
         category: product.category,
-        product_image: product.product_image);
+        product_image: product.product_image,
+        store_image: product.store_image);
 
     await update(product_);
   }

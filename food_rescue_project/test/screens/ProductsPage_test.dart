@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:food_rescue/screens/ProductsPage.dart';
+import 'package:food_rescue/screens/ProductsPage/ProductsPage.dart';
 
 void main() {
   group('ProductsPage', () {

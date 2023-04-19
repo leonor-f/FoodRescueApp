@@ -11,7 +11,8 @@ class ProductsFields {
     expiration_date,
     to_buy,
     category,
-    product_image
+    product_image,
+    store_image
   ];
 
   static final String id = '_id';
@@ -24,6 +25,7 @@ class ProductsFields {
   static final String to_buy = 'to_buy';
   static final String category = 'category';
   static final String product_image = 'product_image';
+  static final String store_image = 'store_image';
 }
 
 class Product {
@@ -37,6 +39,7 @@ class Product {
   final String to_buy;
   final String category;
   final String product_image;
+  final String store_image;
 
   const Product(
       {this.id,
@@ -48,7 +51,8 @@ class Product {
       required this.expiration_date,
       required this.to_buy,
       required this.category,
-      required this.product_image});
+      required this.product_image,
+      required this.store_image});
 
   Product copy({
     int? id,
@@ -61,6 +65,7 @@ class Product {
     String? to_buy,
     String? category,
     String? product_image,
+    String? store_image,
   }) =>
       Product(
         id: id ?? this.id,
@@ -73,6 +78,7 @@ class Product {
         to_buy: to_buy ?? this.to_buy,
         category: category ?? this.category,
         product_image: product_image ?? this.product_image,
+        store_image: store_image ?? this.store_image,
       );
 
   static Product fromJson(Map<String, Object?> json) => Product(
@@ -86,6 +92,7 @@ class Product {
         to_buy: json[ProductsFields.to_buy] as String,
         category: json[ProductsFields.category] as String,
         product_image: json[ProductsFields.product_image] as String,
+        store_image: json[ProductsFields.store_image] as String,
       );
 
   Map<String, Object?> toJson() => {
@@ -98,6 +105,7 @@ class Product {
         ProductsFields.expiration_date: expiration_date,
         ProductsFields.to_buy: to_buy,
         ProductsFields.category: category,
-        ProductsFields.product_image: product_image
+        ProductsFields.product_image: product_image,
+        ProductsFields.store_image: store_image
       };
 }

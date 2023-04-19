@@ -80,6 +80,18 @@ flutter:
     - assets/images/lidl.png
     - assets/images/minipreco.png
     - assets/images/pingodoce.png
+    - assets/images/arrozpato.png
+    - assets/images/bacalhaubras.png
+    - assets/images/frango.png
+    - assets/images/gelatina.png
+    - assets/images/iogurtes.png
+    - assets/images/leite.png
+    - assets/images/nuggets.png
+    - assets/images/ovos.png
+    - assets/images/pao.png
+    - assets/images/queijo.png
+    - assets/images/salada.png
+    - assets/images/sopa.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'screens/FavoritesPage/FavoritesPage.dart';
-import 'screens/ProductsPage.dart';
+import 'screens/ProductsPage/ProductsPage.dart';
 import 'screens/StoresPage.dart';
 import 'screens/ItemsPage/BucketPage.dart';
 
