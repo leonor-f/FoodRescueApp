@@ -1,5 +1,5 @@
-Feature: Use search bar
-  The search bar should appear on the bottom of the page when we open the app
+Feature: Navigate through all different pages
+  The search bar should appear on the bottom of the screen when I open the app
 
   Scenario: Be able to locate myself on the map
     When I open the app
