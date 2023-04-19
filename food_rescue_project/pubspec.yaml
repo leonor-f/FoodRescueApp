@@ -41,6 +41,11 @@ dependencies:
   google_maps_flutter: 
   # sqflite: ^2.2.6
   # path_provider: ^2.0.14
+  location: ^4.4.0
+  sqflite: ^2.2.6
+  path_provider: ^2.0.14
+  flutter_dotenv: ^5.0.2
+  geolocator: ^9.0.2
 
 dev_dependencies:
   flutter_test:
