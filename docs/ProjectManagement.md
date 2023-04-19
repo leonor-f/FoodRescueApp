@@ -6,7 +6,7 @@ You can find below information and references related with the project managemen
 * Release management:
     * [v0](#)
     * [v1](https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/docs/ProjectManagement.md#iteration-1)
-    * [v2]
+    * [v2](https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/docs/ProjectManagement.md#iteration-2)
     * [v3]
 
 * Iteration planning and retrospectives:
