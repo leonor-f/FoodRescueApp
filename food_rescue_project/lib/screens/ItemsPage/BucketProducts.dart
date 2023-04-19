@@ -97,6 +97,7 @@ class FavoriteProducts extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10),
                         color: Color.fromRGBO(255, 255, 255, 0.7)),
                     child: InkWell(
+                      key: ValueKey('trashbutton'),
                       onTap: () async {
                         await ProductDatabaseManager.instance
                             .updateProductToBuy(product);

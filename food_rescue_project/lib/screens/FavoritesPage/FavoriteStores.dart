@@ -65,6 +65,7 @@ class FavoriteStores extends StatelessWidget {
                                   color: Color.fromRGBO(52, 93, 100, 0.5),
                                 ),
                                 child: InkWell(
+                                    key: ValueKey('removeFavoriteStore'),
                                     onTap: () async {
                                       await MarketDatabaseManager.instance
                                           .updateFavoriteMarket(market);
