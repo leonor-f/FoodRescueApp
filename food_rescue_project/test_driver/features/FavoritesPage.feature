@@ -1,7 +1,7 @@
 Feature: Open favorite stores page
   The favorites page should appear when we click on "Favoritos"
     
-  Scenario: Be able to remove a supermarket from the favorite list
+  Scenario: Be able to remove a supermarket from the favorites list
     Given I open the app
     And I tap on the "Favoritos" button of the search bar
     When I tap on the "Remover dos Favoritos" button
