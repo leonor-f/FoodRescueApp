@@ -1,5 +1,5 @@
-Feature: Open favorite stores page
-  The favorites page should appear when we click on "Favoritos"
+Feature: Modify favorite stores page
+  I should be able to add and remove supermarkets from the favorites list
     
   Scenario: Be able to remove a supermarket from the favorites list
     Given I open the app
