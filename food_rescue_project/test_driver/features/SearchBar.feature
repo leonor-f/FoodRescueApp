@@ -1,23 +1,22 @@
 Feature: Use search bar
   The search bar should appear on the bottom of the page when we open the app
 
-  Scenario: Map viewer with a pin in user's present location appears when the user opens the app
+  Scenario: Be able to locate myself on the map
     When I open the app
-    Then I expect the initial map with a pin on current location and nearby supermarkets (if existing) to be presented.
+    Then I expect to see the initial map with a pin on my current location and nearby supermarkets (if existing).
     
-  Scenario: Be able to access the Map page
-    Given I oppened the app
-    And I used the search bar to access other page than the one with the map that is presented initialy
-    When I tap the button on the search bar that contains the text "Lojas"
-    Then I expect the map with a pin on current location and nearby supermarkets (if existing) to be presented.
-    
-  Scenario: Be able to access the page with the list of products intended to be bought
+  Scenario: Be able to access the map page
     When I open the app
-    And I tap the button on the search bar that contais the text "Items"
-    Then I expect the list of products that were added to the list of them that I want to buy to be presented with the name of the product, expiration date, supermarket name, icon and location.
+    And I tap on the "Lojas" button of the search bar
+    Then I expect to see the map with a pin on the current location and nearby supermarkets (if existing).
+    
+  Scenario: Be able to access the bucket list page
+    When I open the app
+    And I tap on the "Items" button of the search bar
+    Then I expect to see the list of products that I added to my bucket list with their name, quantity, old price, new price, expiration date, supermarket and respective icon.
     
   Scenario: Be able to access favorite supermarkets' page
     When I open the app
-    And I tap the button on the search bar that contains the text "Favoritos"
-    Then I expect the list of supermarkets that were added to favorites to be presented with their names, location and icon.
+    And I tap on the "Favoritos" button of the search bar
+    Then I expect to see the supermarkets that I added to my favorite list with their names, location and icon.
     
