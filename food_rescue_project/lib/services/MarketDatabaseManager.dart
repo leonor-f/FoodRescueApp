@@ -47,7 +47,7 @@ class MarketDatabaseManager {
     await populateDatabase(db);
   }
 
-  Future<Market> create(Market market) async {
+  static Future<Market> create(Market market) async {
     final db = await instance.database;
     final id = await db.insert(tableMarkets, market.toJson());
     return market.copy(id: id);

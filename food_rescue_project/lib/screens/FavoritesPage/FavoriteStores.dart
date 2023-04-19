@@ -47,6 +47,7 @@ class FavoriteStores extends StatelessWidget {
                           children: [
                             Text(
                               storeName,
+                              maxLines: null,
                               style: TextStyle(
                                 color: Color.fromRGBO(52, 93, 100, 1),
                                 fontWeight: FontWeight.bold,
@@ -80,7 +81,8 @@ class FavoriteStores extends StatelessWidget {
                                     child: Row(
                                       children: [
                                         Text(
-                                          'Remover dos favoritos  ',
+                                          'Remover dos favoritos ',
+                                          maxLines: null,
                                           style: TextStyle(
                                             color: Color.fromRGBO(
                                                 188, 222, 228, 1),
