@@ -53,5 +53,7 @@ We can already see the app taking shape as some features are being added.
 
 
 - End of iteration:
-
+<p align="center" justify="center">
+  <img src="https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/images/end_v2.png"/>
+</p>
 
