@@ -18,5 +18,5 @@ Feature: Use search bar
   Scenario: Be able to access favorite supermarkets' page
     When I open the app
     And I tap on the "Favoritos" button of the search bar
-    Then I expect to see the supermarkets that I added to my favorite list with their names, location and icon.
+    Then I expect to see the supermarkets that I added to my favorites list with their names, location and icon.
     
