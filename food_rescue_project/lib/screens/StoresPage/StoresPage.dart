@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:food_rescue/screens/ProductsPage/ProductsBottomCard.dart';
-import 'package:food_rescue/screens/ProductsPage/ProductPage.dart';
+import 'package:food_rescue/screens/StoresPage/BottomPanel.dart';
+import 'package:food_rescue/screens/StoresPage/MapPage.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
-class ProductsPage extends StatefulWidget {
+class StorePage extends StatefulWidget {
   @override
-  _ProductsPageState createState() => _ProductsPageState();
+  _StorePageState createState() => _StorePageState();
 }
 
-class _ProductsPageState extends State<ProductsPage> {
+class _StorePageState extends State<StorePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SlidingUpPanel(
-          body: ProductPage(),
+          body: MyMapPage(),
           panelBuilder: (controller) => BottomPanel(
                 controller: controller,
               )),
