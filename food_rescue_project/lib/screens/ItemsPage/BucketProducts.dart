@@ -100,7 +100,7 @@ class FavoriteProducts extends StatelessWidget {
                       key: ValueKey('trashbutton'),
                       onTap: () async {
                         await ProductDatabaseManager.instance
-                            .updateProductToBuy(product);
+                            .updateProductToBuy(product, 'não');
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
                               content:
