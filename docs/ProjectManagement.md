@@ -66,6 +66,9 @@ The next steps are to make small adjustments to some of the user stories, develo
 ### Iteration #3
 
 #### Iteration planning
+- Start of iteration:
+
+- End of iteration:
 
 #### Iteration retrospectives
 
