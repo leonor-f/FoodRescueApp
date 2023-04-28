@@ -7,7 +7,7 @@ You can find below information and references related with the project managemen
     * [v0](#)
     * [v1](https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/docs/ProjectManagement.md#iteration-1)
     * [v2](https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/docs/ProjectManagement.md#iteration-2)
-    * [v3]
+    * [v3](https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/docs/ProjectManagement.md#iteration-3)
 
 * Iteration planning and retrospectives:
 
@@ -62,3 +62,10 @@ We can already see the app taking shape as some features are being added.
 #### Iteration retrospectives
 All required tasks have been successfully accomplished (the complete implementation of the SQL database, the location of the user on the map, the removal of supermarkets from the user's favorite list, the removal products from the user's bucket list and the development of unit and acceptance tests for the implemented features).
 The next steps are to make small adjustments to some of the user stories, develop the last 2 must-have features and 2 should-have features.
+
+### Iteration #3
+
+#### Iteration planning
+
+#### Iteration retrospectives
+
