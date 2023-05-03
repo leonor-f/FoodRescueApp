@@ -103,7 +103,8 @@ class MapPageState extends State<MyMapPage> {
     return Scaffold(
       body: currentlocation == null
           ? const Center(
-              child: CircularProgressIndicator(),
+              child: CircularProgressIndicator(
+                  color: Color.fromRGBO(52, 93, 100, 0.6)),
             )
           : Column(
               children: [

@@ -99,7 +99,7 @@ class FavoriteProducts extends StatelessWidget {
                     child: InkWell(
                       onTap: () async {
                         await ProductDatabaseManager.instance
-                            .updateProductToBuy(product);
+                            .updateProductToBuy(product, 'não');
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
                               content:
