@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_rescue/screens/ProductsPage/ProductsPage.dart';
+import 'package:food_rescue/screens/ProductsPage/ProductPage.dart';
 import 'package:food_rescue/services/ProductsDatabaseManager.dart';
 import 'package:food_rescue/models/products.dart';
 
