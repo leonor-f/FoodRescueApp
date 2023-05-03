@@ -51,6 +51,11 @@ dependencies:
   latlong2: ^0.8.1
   search_map_location: 
 
+  flutter_google_places: ^0.3.0
+  latlong2: ^0.8.1
+  search_map_location: 
+
+
 
 dev_dependencies:
   flutter_test:

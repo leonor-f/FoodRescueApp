@@ -83,6 +83,7 @@ class FavoriteStores extends StatelessWidget {
                                         Expanded(
                                           child: Text(
                                             'Remover dos favoritos',
+
                                             maxLines: null,
                                             style: TextStyle(
                                               color: Color.fromRGBO(

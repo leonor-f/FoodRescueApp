@@ -7,7 +7,7 @@ You can find below information and references related with the project managemen
     * [v0](#)
     * [v1](https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/docs/ProjectManagement.md#iteration-1)
     * [v2](https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/docs/ProjectManagement.md#iteration-2)
-    * [v3]
+    * [v3](https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/docs/ProjectManagement.md#iteration-3)
 
 * Iteration planning and retrospectives:
 
@@ -62,3 +62,21 @@ We can already see the app taking shape as some features are being added.
 #### Iteration retrospectives
 All required tasks have been successfully accomplished (the complete implementation of the SQL database, the location of the user on the map, the removal of supermarkets from the user's favorite list, the removal products from the user's bucket list and the development of unit and acceptance tests for the implemented features).
 The next steps are to make small adjustments to some of the user stories, develop the last 2 must-have features and 2 should-have features.
+
+### Iteration #3
+
+#### Iteration planning
+- Start of iteration:
+
+<p align="center" justify="center">
+  <img src="https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/images/start_v3.png"/>
+</p>
+
+- End of iteration:
+<p align="center" justify="center">
+  <img src="https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/images/end_v3.png"/>
+</p>
+
+#### Iteration retrospectives
+To simplify and clarify the user about the app, we have added a new feature that shows a tutorial on how to use the app when it is opened. In addition, we fulfill all the tasks stipulated at the beginning of the iteration (see products near expiration dates, add items to the bucket list, search supermarkets, see supermarkets in a radius of 5 km and filter products). In the next iteration, we will finish all the must-have features of the app (the only one missing is to choose a supermarket) and the last should-have feature (order products).
+

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+
 import 'package:food_rescue/screens/ProductsPage/ProductsCategories.dart';
+
 import 'package:food_rescue/services/ProductsDatabaseManager.dart';
 import 'package:food_rescue/models/products.dart';
 
@@ -127,6 +129,7 @@ class ProductStores extends StatelessWidget {
                   image: AssetImage(productImage),
                 )),
               ),
+
             ]),
           )),
     );
