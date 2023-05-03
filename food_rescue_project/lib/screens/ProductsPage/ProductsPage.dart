@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_rescue/screens/ProductsPage/ProductsBottomCard.dart';
-import 'package:food_rescue/screens/ProductsPage/ProductPage.dart';
+import 'package:food_rescue/screens/ProductsPage/ProductsCategories.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 class ProductsPage extends StatefulWidget {

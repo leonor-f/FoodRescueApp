@@ -34,6 +34,11 @@ class _FavoritesPageState extends State<FavoritesPage> {
     setState(() => isLoading = false);
   }
 
+  Future<bool> update() async {
+    refreshMarkets();
+    return Future.value(true);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,19 +52,21 @@ class _FavoritesPageState extends State<FavoritesPage> {
                 child: Column(
                   children: [
                     Expanded(
-                        child: ListView.builder(
-                            itemCount: MarketDatabaseManager
-                                .currentFavoriteStores.length,
-                            itemBuilder: (context, index) {
-                              return FavoriteStores(
-                                storeName: MarketDatabaseManager
-                                    .currentFavoriteStores[index][0],
-                                storeImage: MarketDatabaseManager
-                                    .currentFavoriteStores[index][1],
-                                market: MarketDatabaseManager
-                                    .currentFavoriteStores[index][2],
-                              );
-                            }))
+                        child: RefreshIndicator(
+                            onRefresh: () async => await update(),
+                            child: ListView.builder(
+                                itemCount: MarketDatabaseManager
+                                    .currentFavoriteStores.length,
+                                itemBuilder: (context, index) {
+                                  return FavoriteStores(
+                                    storeName: MarketDatabaseManager
+                                        .currentFavoriteStores[index][0],
+                                    storeImage: MarketDatabaseManager
+                                        .currentFavoriteStores[index][1],
+                                    market: MarketDatabaseManager
+                                        .currentFavoriteStores[index][2],
+                                  );
+                                })))
                   ],
                 ),
               ),

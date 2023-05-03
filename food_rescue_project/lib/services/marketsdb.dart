@@ -9,6 +9,7 @@ class MarketsDatabase {
       market_longitude: -8.6130576256218,
       is_favorite: 'sim',
       store_image: 'assets/images/continente.png',
+      store_pin: 'assets/images/pinconti.png',
     ),
     Market(
       market_chain_name: 'Continente',
@@ -17,6 +18,7 @@ class MarketsDatabase {
       market_longitude: -8.591238283089654,
       is_favorite: 'não',
       store_image: 'assets/images/continente.png',
+      store_pin: 'assets/images/pinconti.png',
     ),
     Market(
       market_chain_name: 'Continente',
@@ -25,6 +27,7 @@ class MarketsDatabase {
       market_longitude: -8.598163535845265,
       is_favorite: 'não',
       store_image: 'assets/images/continente.png',
+      store_pin: 'assets/images/pinconti.png',
     ),
     Market(
       market_chain_name: 'Continente',
@@ -33,6 +36,7 @@ class MarketsDatabase {
       market_longitude: -8.605735893017838,
       is_favorite: 'não',
       store_image: 'assets/images/continente.png',
+      store_pin: 'assets/images/pinconti.png',
     ),
     Market(
       market_chain_name: 'Brio',
@@ -41,6 +45,7 @@ class MarketsDatabase {
       market_longitude: -9.141492007259659,
       is_favorite: 'não',
       store_image: 'assets/images/brio.png',
+      store_pin: 'assets/images/pinbrio.png',
     ),
     Market(
       market_chain_name: 'Apolónia',
@@ -49,6 +54,7 @@ class MarketsDatabase {
       market_longitude: -8.03978318341418,
       is_favorite: 'não',
       store_image: 'assets/images/apolonia.jpg',
+      store_pin: 'assets/images/pinapo.png',
     ),
     Market(
       market_chain_name: 'Apolónia',
@@ -57,6 +63,7 @@ class MarketsDatabase {
       market_longitude: -8.453118279599462,
       is_favorite: 'não',
       store_image: 'assets/images/apolonia.jpg',
+      store_pin: 'assets/images/pinapo.png',
     ),
     Market(
       market_chain_name: 'Lidl',
@@ -65,6 +72,7 @@ class MarketsDatabase {
       market_longitude: -8.610280581614736,
       is_favorite: 'sim',
       store_image: 'assets/images/lidl.png',
+      store_pin: 'assets/images/pinlidl.png',
     ),
     Market(
       market_chain_name: 'Lidl',
@@ -73,6 +81,7 @@ class MarketsDatabase {
       market_longitude: -8.581939913821598,
       is_favorite: 'não',
       store_image: 'assets/images/lidl.png',
+      store_pin: 'assets/images/pinlidl.png',
     ),
     Market(
       market_chain_name: 'Lidl',
@@ -81,6 +90,7 @@ class MarketsDatabase {
       market_longitude: -8.594235884175752,
       is_favorite: 'não',
       store_image: 'assets/images/lidl.png',
+      store_pin: 'assets/images/pinlidl.png',
     ),
     Market(
       market_chain_name: 'Lidl',
@@ -89,6 +99,7 @@ class MarketsDatabase {
       market_longitude: -8.609290898392503,
       is_favorite: 'não',
       store_image: 'assets/images/lidl.png',
+      store_pin: 'assets/images/pinlidl.png',
     ),
     Market(
       market_chain_name: 'Pingo Doce',
@@ -97,6 +108,7 @@ class MarketsDatabase {
       market_longitude: -8.608954583426073,
       is_favorite: 'não',
       store_image: 'assets/images/pingodoce.png',
+      store_pin: 'assets/images/pinpingo.png',
     ),
     Market(
       market_chain_name: 'Pingo Doce',
@@ -105,6 +117,7 @@ class MarketsDatabase {
       market_longitude: -8.610925030042857,
       is_favorite: 'não',
       store_image: 'assets/images/pingodoce.png',
+      store_pin: 'assets/images/pinpingo.png',
     ),
     Market(
       market_chain_name: 'Pingo Doce',
@@ -113,6 +126,7 @@ class MarketsDatabase {
       market_longitude: -8.612382861184058,
       is_favorite: 'não',
       store_image: 'assets/images/pingodoce.png',
+      store_pin: 'assets/images/pinpingo.png',
     ),
     Market(
       market_chain_name: 'Pingo Doce',
@@ -121,6 +135,7 @@ class MarketsDatabase {
       market_longitude: -8.629637907609014,
       is_favorite: 'não',
       store_image: 'assets/images/pingodoce.png',
+      store_pin: 'assets/images/pinpingo.png',
     ),
     Market(
       market_chain_name: 'Pingo Doce',
@@ -129,6 +144,7 @@ class MarketsDatabase {
       market_longitude: -8.682082181873257,
       is_favorite: 'não',
       store_image: 'assets/images/pingodoce.png',
+      store_pin: 'assets/images/pinpingo.png',
     ),
     Market(
       market_chain_name: 'Intermaché',
@@ -137,6 +153,7 @@ class MarketsDatabase {
       market_longitude: -8.66469946558512,
       is_favorite: 'sim',
       store_image: 'assets/images/intermache.png',
+      store_pin: 'assets/images/pininter.png',
     ),
     Market(
       market_chain_name: 'Intermaché',
@@ -145,6 +162,7 @@ class MarketsDatabase {
       market_longitude: -8.590779543254856,
       is_favorite: 'não',
       store_image: 'assets/images/intermache.png',
+      store_pin: 'assets/images/pininter.png',
     ),
     Market(
       market_chain_name: 'Intermaché',
@@ -153,6 +171,7 @@ class MarketsDatabase {
       market_longitude: -8.55303886484232,
       is_favorite: 'não',
       store_image: 'assets/images/intermache.png',
+      store_pin: 'assets/images/pininter.png',
     ),
     Market(
       market_chain_name: 'Intermaché',
@@ -161,6 +180,7 @@ class MarketsDatabase {
       market_longitude: -8.50867500833185,
       is_favorite: 'não',
       store_image: 'assets/images/intermache.png',
+      store_pin: 'assets/images/pininter.png',
     ),
     Market(
       market_chain_name: 'Froiz',
@@ -169,6 +189,7 @@ class MarketsDatabase {
       market_longitude: -8.586301530642764,
       is_favorite: 'não',
       store_image: 'assets/images/froiz.png',
+      store_pin: 'assets/images/pinfroiz.png',
     ),
     Market(
       market_chain_name: 'Froiz',
@@ -177,6 +198,7 @@ class MarketsDatabase {
       market_longitude: -8.606315303777395,
       is_favorite: 'não',
       store_image: 'assets/images/froiz.png',
+      store_pin: 'assets/images/pinfroiz.png',
     ),
     Market(
       market_chain_name: 'Froiz',
@@ -185,6 +207,7 @@ class MarketsDatabase {
       market_longitude: -8.621357751071791,
       is_favorite: 'não',
       store_image: 'assets/images/froiz.png',
+      store_pin: 'assets/images/pinfroiz.png',
     ),
     Market(
       market_chain_name: 'Auchan',
@@ -193,6 +216,7 @@ class MarketsDatabase {
       market_longitude: -8.564355540686455,
       is_favorite: 'não',
       store_image: 'assets/images/auchan.png',
+      store_pin: 'assets/images/pinauchan.png',
     ),
     Market(
       market_chain_name: 'Auchan',
@@ -201,6 +225,7 @@ class MarketsDatabase {
       market_longitude: -8.639137493913102,
       is_favorite: 'não',
       store_image: 'assets/images/auchan.png',
+      store_pin: 'assets/images/pinauchan.png',
     ),
     Market(
       market_chain_name: 'Auchan',
@@ -209,6 +234,7 @@ class MarketsDatabase {
       market_longitude: -8.622220149968232,
       is_favorite: 'não',
       store_image: 'assets/images/auchan.png',
+      store_pin: 'assets/images/pinauchan.png',
     ),
     Market(
       market_chain_name: 'Minipreço',
@@ -217,6 +243,7 @@ class MarketsDatabase {
       market_longitude: -8.621899290340497,
       is_favorite: 'não',
       store_image: 'assets/images/minipreco.png',
+      store_pin: 'assets/images/pinmini.png',
     ),
     Market(
       market_chain_name: 'Minipreço',
@@ -225,6 +252,7 @@ class MarketsDatabase {
       market_longitude: -8.645758105268039,
       is_favorite: 'não',
       store_image: 'assets/images/minipreco.png',
+      store_pin: 'assets/images/pinmini.png',
     ),
     Market(
       market_chain_name: 'Minipreço',
@@ -233,6 +261,7 @@ class MarketsDatabase {
       market_longitude: -8.556418127184886,
       is_favorite: 'sim',
       store_image: 'assets/images/minipreco.png',
+      store_pin: 'assets/images/pinmini.png',
     ),
   ];
 }
