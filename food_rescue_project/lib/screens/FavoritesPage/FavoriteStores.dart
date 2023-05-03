@@ -57,7 +57,7 @@ class FavoriteStores extends StatelessWidget {
                               height: 32,
                             ),
                             Container(
-                                padding: EdgeInsets.only(left: 15),
+                                padding: EdgeInsets.only(left: 15, right: 15),
                                 height: 30,
                                 width: 205,
                                 decoration: BoxDecoration(
@@ -65,7 +65,6 @@ class FavoriteStores extends StatelessWidget {
                                   color: Color.fromRGBO(52, 93, 100, 0.5),
                                 ),
                                 child: InkWell(
-                                    key: ValueKey('removeFavoriteStore'),
                                     onTap: () async {
                                       await MarketDatabaseManager.instance
                                           .updateFavoriteMarket(market);
@@ -81,14 +80,17 @@ class FavoriteStores extends StatelessWidget {
                                     },
                                     child: Row(
                                       children: [
-                                        Text(
-                                          'Remover dos favoritos ',
-                                          maxLines: null,
-                                          style: TextStyle(
-                                            color: Color.fromRGBO(
-                                                188, 222, 228, 1),
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold,
+                                        Expanded(
+                                          child: Text(
+                                            'Remover dos favoritos',
+
+                                            maxLines: null,
+                                            style: TextStyle(
+                                              color: Color.fromRGBO(
+                                                  188, 222, 228, 1),
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                           ),
                                         ),
                                         Icon(

@@ -36,6 +36,11 @@ class _BucketPageState extends State<BucketPage> {
     setState(() => isLoading = false);
   }
 
+  Future<bool> update() async {
+    refreshProducts();
+    return Future.value(true);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,29 +54,31 @@ class _BucketPageState extends State<BucketPage> {
                 child: Column(
                   children: [
                     Expanded(
-                        child: ListView.builder(
-                            itemCount: ProductDatabaseManager
-                                .currentFavoriteItems.length,
-                            itemBuilder: (context, index) {
-                              return FavoriteProducts(
-                                productDescription: ProductDatabaseManager
-                                    .currentFavoriteItems[index][0],
-                                productCategory: ProductDatabaseManager
-                                    .currentFavoriteItems[index][1],
-                                productImage: ProductDatabaseManager
-                                    .currentFavoriteItems[index][2],
-                                oldPrice: ProductDatabaseManager
-                                    .currentFavoriteItems[index][3],
-                                newPrice: ProductDatabaseManager
-                                    .currentFavoriteItems[index][4],
-                                expirationDate: ProductDatabaseManager
-                                    .currentFavoriteItems[index][5],
-                                marketName: ProductDatabaseManager
-                                    .currentFavoriteItems[index][6],
-                                product: ProductDatabaseManager
-                                    .currentFavoriteItems[index][7],
-                              );
-                            }))
+                        child: RefreshIndicator(
+                            onRefresh: () async => await update(),
+                            child: ListView.builder(
+                                itemCount: ProductDatabaseManager
+                                    .currentFavoriteItems.length,
+                                itemBuilder: (context, index) {
+                                  return FavoriteProducts(
+                                    productDescription: ProductDatabaseManager
+                                        .currentFavoriteItems[index][0],
+                                    productCategory: ProductDatabaseManager
+                                        .currentFavoriteItems[index][1],
+                                    productImage: ProductDatabaseManager
+                                        .currentFavoriteItems[index][2],
+                                    oldPrice: ProductDatabaseManager
+                                        .currentFavoriteItems[index][3],
+                                    newPrice: ProductDatabaseManager
+                                        .currentFavoriteItems[index][4],
+                                    expirationDate: ProductDatabaseManager
+                                        .currentFavoriteItems[index][5],
+                                    marketName: ProductDatabaseManager
+                                        .currentFavoriteItems[index][6],
+                                    product: ProductDatabaseManager
+                                        .currentFavoriteItems[index][7],
+                                  );
+                                })))
                   ],
                 ),
               ),

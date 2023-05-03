@@ -5,16 +5,16 @@ void main() {
   group('Product model', () {
     test('should have correct properties', () {
       final product = Product(
-          market_name: 'Test Market',
-          product_description: 'Test product',
-          old_price: 1.99,
-          new_price: 0.99,
-          quantity: 1.5,
-          expiration_date: '2023-12-31',
-          to_buy: 'sim',
-          category: 'Test category',
-          product_image: 'test.jpg',
-          store_image: 'teststore.jpg');
+        market_name: 'Test Market',
+        product_description: 'Test product',
+        old_price: 1.99,
+        new_price: 0.99,
+        quantity: 1.5,
+        expiration_date: '2023-12-31',
+        to_buy: 'sim',
+        category: 'Test category',
+        product_image: 'test.jpg',
+      );
       expect(product.market_name, 'Test Market');
       expect(product.product_description, 'Test product');
       expect(product.old_price, 1.99);
@@ -24,7 +24,6 @@ void main() {
       expect(product.to_buy, 'sim');
       expect(product.category, 'Test category');
       expect(product.product_image, 'test.jpg');
-      expect(product.store_image, 'teststore.jpg');
     });
 
     test('should convert to and from JSON', () {
@@ -39,7 +38,6 @@ void main() {
         ProductsFields.to_buy: 'sim',
         ProductsFields.category: 'Test category',
         ProductsFields.product_image: 'test.jpg',
-        ProductsFields.store_image: 'teststore.jpg',
       };
       final product = Product.fromJson(json);
       expect(product.id, 1);
@@ -52,7 +50,6 @@ void main() {
       expect(product.to_buy, 'sim');
       expect(product.category, 'Test category');
       expect(product.product_image, 'test.jpg');
-      expect(product.store_image, 'teststore.jpg');
       expect(product.toJson(), json);
     });
   });

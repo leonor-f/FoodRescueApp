@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_rescue/screens/ProductsPage/ProductsPage.dart';
+
+import 'package:food_rescue/screens/ProductsPage/ProductsCategories.dart';
+
 import 'package:food_rescue/services/ProductsDatabaseManager.dart';
 import 'package:food_rescue/models/products.dart';
 
@@ -85,7 +87,41 @@ class ProductStores extends StatelessWidget {
                         )
                       ])),
               Container(
-                margin: EdgeInsets.fromLTRB(240, 0, 0, 0),
+                  margin: EdgeInsets.fromLTRB(210, 25, 0, 0),
+                  height: 30,
+                  width: 30,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Color.fromRGBO(255, 255, 255, 0.7)),
+                  child: InkWell(
+                    key: ValueKey('addbutton'),
+                    onTap: () async {
+                      await ProductDatabaseManager.instance
+                          .updateProductToBuy(product, 'sim');
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                            content: Text('O item foi adicionado à sua lista')),
+                      );
+                      ProductDatabaseManager.currentFavoriteItems.add([
+                        productDescription,
+                        productCategory,
+                        product.store_image,
+                        oldPrice,
+                        newPrice,
+                        expirationDate,
+                        marketName,
+                        product,
+                        productImage,
+                      ]);
+                    },
+                    child: Icon(
+                      add_circled,
+                      size: 20,
+                      color: Color.fromRGBO(106, 107, 117, 1),
+                    ),
+                  )),
+              Container(
+                margin: EdgeInsets.fromLTRB(250, 0, 0, 0),
                 height: 80,
                 width: 80,
                 decoration: BoxDecoration(
@@ -93,44 +129,7 @@ class ProductStores extends StatelessWidget {
                   image: AssetImage(productImage),
                 )),
               ),
-              //if(product.to_buy == 'não'){
-                Container(
-                    margin: EdgeInsets.fromLTRB(290, 25, 0, 0),
-                    height: 30,
-                    width: 30,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Color.fromRGBO(255, 255, 255, 0.7)),
-                    child: InkWell(
-                      key: ValueKey('addbutton'),
-                      onTap: () async {
-                        await ProductDatabaseManager.instance
-                            .updateProductToBuy(product, 'sim');
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                              content:
-                              Text('O item foi adicionado à sua lista')),
-                        );
-                        ProductDatabaseManager.currentFavoriteItems
-                            .add([
-                              product.product_description,
-                              product.category,
-                              product.store_image,
-                              product.old_price,
-                              product.new_price,
-                              product.expiration_date,
-                              product.market_name,
-                              product,
-                              product.product_image,
-                            ]);
-                      },
-                      child: Icon(
-                        add_circled,
-                        size: 20,
-                        color: Color.fromRGBO(106, 107, 117, 1),
-                      ),
-                    )),
-              //}
+
             ]),
           )),
     );

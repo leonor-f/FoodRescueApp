@@ -67,6 +67,7 @@ The next steps are to make small adjustments to some of the user stories, develo
 
 #### Iteration planning
 - Start of iteration:
+
 <p align="center" justify="center">
   <img src="https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/images/start_v3.png"/>
 </p>
@@ -78,3 +79,4 @@ The next steps are to make small adjustments to some of the user stories, develo
 
 #### Iteration retrospectives
 To simplify and clarify the user about the app, we have added a new feature that shows a tutorial on how to use the app when it is opened. In addition, we fulfill all the tasks stipulated at the beginning of the iteration (see products near expiration dates, add items to the bucket list, search supermarkets, see supermarkets in a radius of 5 km and filter products). In the next iteration, we will finish all the must-have features of the app (the only one missing is to choose a supermarket) and the last should-have feature (order products).
+

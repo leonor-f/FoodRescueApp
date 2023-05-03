@@ -6,6 +6,7 @@ import '../services/marketsdb.dart';
 class MarketDatabaseManager {
   static String favourite = 'sim';
   static List<List<dynamic>> currentFavoriteStores = [];
+  static List<List<dynamic>> allStores = [];
 
   static final MarketDatabaseManager instance = MarketDatabaseManager._init();
 
@@ -40,7 +41,8 @@ class MarketDatabaseManager {
       ${MarketsFields.market_latitude} $doubleType,
       ${MarketsFields.market_longitude} $doubleType,
       ${MarketsFields.is_favorite} $textType,
-      ${MarketsFields.store_image} $textType
+      ${MarketsFields.store_image} $textType,
+      ${MarketsFields.store_pin} $textType
     )
     ''');
 
@@ -83,6 +85,12 @@ class MarketDatabaseManager {
       final String storeName = markets[i].market_name;
       final String isFavorite = markets[i].is_favorite;
       final String storeImage = markets[i].store_image;
+      final String marketChainName = markets[i].market_chain_name;
+      final double marketLatitude = markets[i].market_latitude;
+      final double marketLongitude = markets[i].market_longitude;
+      final String markerPin = markets[i].store_pin;
+
+      allStores.add([storeName, markerPin, marketLatitude, marketLongitude]);
 
       if (favourite == isFavorite) {
         currentFavoriteStores.add([storeName, storeImage, markets[i]]);

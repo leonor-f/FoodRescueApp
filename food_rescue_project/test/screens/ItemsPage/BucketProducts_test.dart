@@ -15,8 +15,7 @@ void main() {
     expiration_date: '2023-04-30',
     to_buy: 'sim',
     category: 'Test Category',
-    product_image: 'assets/images/ovos.png',
-    store_image: 'assets/images/continente.png',
+    product_image: 'assets/images/continente.png',
   );
 
   IconData trash = IconData(0xf4c4,

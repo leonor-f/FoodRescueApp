@@ -39,12 +39,20 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   google_maps_flutter: 
-  # sqflite: ^2.2.6
-  # path_provider: ^2.0.14
   location: ^4.4.0
   path_provider: ^2.0.14
   flutter_dotenv: ^5.0.2
   geolocator: ^9.0.2
+  shared_preferences: ^2.0.11
+  sliding_up_panel: ^2.0.0+1
+  smooth_page_indicator: ^1.0.0+2
+  lottie: ^2.3.2
+
+  flutter_google_places: ^0.3.0
+  latlong2: ^0.8.1
+  search_map_location: 
+
+
 
 dev_dependencies:
   flutter_test:
@@ -71,6 +79,20 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:     
+    - assets/map_style.txt
+    - assets/images/pinaldi.png
+    - assets/images/pinapo.png
+    - assets/images/pinmini.png
+    - assets/images/pinfroiz.png
+    - assets/images/pininter.png
+    - assets/images/pinspar.png
+    - assets/images/pinsupercor.png
+    - assets/images/pinbrio.png
+    - assets/images/pinmercadona.png
+    - assets/images/pinauchan.png
+    - assets/images/pinlidl.png
+    - assets/images/pinpingo.png
+    - assets/images/pinconti.png
     - assets/images/apolonia.jpg
     - assets/images/auchan.png
     - assets/images/brio.png
@@ -92,6 +114,7 @@ flutter:
     - assets/images/queijo.png
     - assets/images/salada.png
     - assets/images/sopa.png
+    - assets/images/FoodRescue.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
