@@ -56,6 +56,7 @@ class MapPageState extends State<MyMapPage> {
   }
 
 
+
   Future<Position> _getCurrentLocation() async {
     bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
@@ -134,6 +135,7 @@ class MapPageState extends State<MyMapPage> {
                     controller
                         .animateCamera(CameraUpdate.newLatLng(coordinates));
                   },
+
                 ),
                 Expanded(
                   child: FutureBuilder(
