@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
+
 import 'package:search_map_location/search_map_location.dart';
 import 'package:search_map_location/utils/google_search/place.dart';
 import 'package:flutter/services.dart' show rootBundle;
@@ -12,6 +13,7 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:food_rescue/services/MarketDatabaseManager.dart';
 
+
 class MyMapPage extends StatefulWidget {
   @override
   State<MyMapPage> createState() => MapPageState();
@@ -19,6 +21,7 @@ class MyMapPage extends StatefulWidget {
 
 class MapPageState extends State<MyMapPage> {
   Completer<GoogleMapController> _controller = Completer();
+
   Set<Marker> markers = {};
   late String _mapStyle;
   LocationData? currentlocation;
@@ -52,6 +55,7 @@ class MapPageState extends State<MyMapPage> {
     });
   }
 
+
   Future<Position> _getCurrentLocation() async {
     bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
     if (!serviceEnabled) {
@@ -74,6 +78,7 @@ class MapPageState extends State<MyMapPage> {
   @override
   void initState() {
     super.initState();
+
     rootBundle.loadString('assets/map_style.txt').then((string) {
       _mapStyle = string;
     });
@@ -89,7 +94,9 @@ class MapPageState extends State<MyMapPage> {
       print('Error getting current location: $error');
     });
 
+
     setCustomMarker();
+
   }
 
   @override
@@ -102,6 +109,7 @@ class MapPageState extends State<MyMapPage> {
     );
     return Scaffold(
       body: currentlocation == null
+
           ? const Center(
               child: CircularProgressIndicator(
                   color: Color.fromRGBO(52, 93, 100, 0.6)),
@@ -152,6 +160,7 @@ class MapPageState extends State<MyMapPage> {
                   ),
                 ),
               ],
+
             ),
     );
   }
