@@ -129,6 +129,7 @@ class ProductStores extends StatelessWidget {
                   image: AssetImage(productImage),
                 )),
               ),
+
             ]),
           )),
     );
