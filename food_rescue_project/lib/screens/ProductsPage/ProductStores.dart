@@ -112,7 +112,17 @@ class ProductStores extends StatelessWidget {
                               Text('O item foi adicionado à sua lista')),
                         );
                         ProductDatabaseManager.currentFavoriteItems
-                            .insert(product);
+                            .add([
+                              product.product_description,
+                              product.category,
+                              product.store_image,
+                              product.old_price,
+                              product.new_price,
+                              product.expiration_date,
+                              product.market_name,
+                              product,
+                              product.product_image,
+                            ]);
                       },
                       child: Icon(
                         add_circled,
