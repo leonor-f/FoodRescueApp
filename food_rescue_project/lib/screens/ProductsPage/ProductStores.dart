@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_rescue/screens/ProductsPage/ProductsPage.dart';
+import 'package:food_rescue/screens/ProductsPage/ProductPage.dart';
 import 'package:food_rescue/services/ProductsDatabaseManager.dart';
 import 'package:food_rescue/models/products.dart';
 
@@ -26,9 +26,6 @@ class ProductStores extends StatelessWidget {
       required this.product});
 
   static const IconData trash = IconData(0xf4c4,
-      fontFamily: "CupertinoIcons", fontPackage: "cupertino_icons");
-
-  static const IconData add_circled = IconData(0xf48a,
       fontFamily: "CupertinoIcons", fontPackage: "cupertino_icons");
 
   @override
@@ -93,34 +90,6 @@ class ProductStores extends StatelessWidget {
                   image: AssetImage(productImage),
                 )),
               ),
-              //if(product.to_buy == 'não'){
-                Container(
-                    margin: EdgeInsets.fromLTRB(290, 25, 0, 0),
-                    height: 30,
-                    width: 30,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Color.fromRGBO(255, 255, 255, 0.7)),
-                    child: InkWell(
-                      key: ValueKey('addbutton'),
-                      onTap: () async {
-                        await ProductDatabaseManager.instance
-                            .updateProductToBuy(product, 'sim');
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                              content:
-                              Text('O item foi adicionado à sua lista')),
-                        );
-                        ProductDatabaseManager.currentFavoriteItems
-                            .insert(product);
-                      },
-                      child: Icon(
-                        add_circled,
-                        size: 20,
-                        color: Color.fromRGBO(106, 107, 117, 1),
-                      ),
-                    )),
-              //}
             ]),
           )),
     );

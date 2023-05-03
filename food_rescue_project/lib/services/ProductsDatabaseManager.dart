@@ -139,7 +139,7 @@ class ProductDatabaseManager {
     );
   }
 
-  Future updateProductToBuy(Product product, String to_buy_) async {
+  Future updateProductToBuy(Product product) async {
     final product_ = product.copy(
         market_name: product.market_name,
         product_description: product.product_description,
@@ -147,7 +147,7 @@ class ProductDatabaseManager {
         new_price: product.new_price,
         quantity: product.quantity,
         expiration_date: product.expiration_date,
-        to_buy: to_buy_,
+        to_buy: 'não',
         category: product.category,
         product_image: product.product_image,
         store_image: product.store_image);

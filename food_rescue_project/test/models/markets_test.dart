@@ -9,7 +9,7 @@ void main() {
         market_name: 'Test Market',
         market_latitude: 37.7749,
         market_longitude: -122.4194,
-        is_favorite: 'não',
+        is_favorite: 'false',
         store_image: 'https://example.com/test-image.jpg',
       );
 
@@ -17,7 +17,7 @@ void main() {
       expect(market.market_name, 'Test Market');
       expect(market.market_latitude, 37.7749);
       expect(market.market_longitude, -122.4194);
-      expect(market.is_favorite, 'não');
+      expect(market.is_favorite, 'false');
       expect(market.store_image, 'https://example.com/test-image.jpg');
     });
 
@@ -28,14 +28,14 @@ void main() {
         market_name: 'Test Market',
         market_latitude: 37.7749,
         market_longitude: -122.4194,
-        is_favorite: 'não',
+        is_favorite: 'false',
         store_image: 'https://example.com/test-image.jpg',
       );
 
       final updatedMarket = market.copy(
         market_name: 'New Test Market',
         market_latitude: 37.7793,
-        is_favorite: 'sim',
+        is_favorite: 'true',
       );
 
       expect(updatedMarket.id, 1);
@@ -43,7 +43,7 @@ void main() {
       expect(updatedMarket.market_name, 'New Test Market');
       expect(updatedMarket.market_latitude, 37.7793);
       expect(updatedMarket.market_longitude, -122.4194);
-      expect(updatedMarket.is_favorite, 'sim');
+      expect(updatedMarket.is_favorite, 'true');
       expect(updatedMarket.store_image, 'https://example.com/test-image.jpg');
     });
   });
@@ -54,7 +54,7 @@ void main() {
     market_name: 'Test Market',
     market_latitude: 12.345,
     market_longitude: 67.890,
-    is_favorite: 'sim',
+    is_favorite: 'yes',
     store_image: 'test_image.jpg',
   );
 
@@ -65,7 +65,7 @@ void main() {
       'market_name': 'Test Market',
       'market_latitude': 12.345,
       'market_longitude': 67.890,
-      'is_favorite': 'sim',
+      'is_favorite': 'yes',
       'store_image': 'test_image.jpg',
     };
 
@@ -89,7 +89,7 @@ void main() {
       'market_name': 'Test Market',
       'market_latitude': 12.345,
       'market_longitude': 67.890,
-      'is_favorite': 'sim',
+      'is_favorite': 'yes',
       'store_image': 'test_image.jpg',
     };
 
