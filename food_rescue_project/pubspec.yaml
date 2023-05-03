@@ -47,6 +47,9 @@ dependencies:
   sliding_up_panel: ^2.0.0+1
   smooth_page_indicator: ^1.0.0+2
   lottie: ^2.3.2
+  flutter_google_places: ^0.3.0
+  latlong2: ^0.8.1
+  search_map_location: 
 
 
 dev_dependencies:
@@ -74,6 +77,20 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:     
+    - assets/map_style.txt
+    - assets/images/pinaldi.png
+    - assets/images/pinapo.png
+    - assets/images/pinmini.png
+    - assets/images/pinfroiz.png
+    - assets/images/pininter.png
+    - assets/images/pinspar.png
+    - assets/images/pinsupercor.png
+    - assets/images/pinbrio.png
+    - assets/images/pinmercadona.png
+    - assets/images/pinauchan.png
+    - assets/images/pinlidl.png
+    - assets/images/pinpingo.png
+    - assets/images/pinconti.png
     - assets/images/apolonia.jpg
     - assets/images/auchan.png
     - assets/images/brio.png
