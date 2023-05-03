@@ -57,7 +57,7 @@ class FavoriteStores extends StatelessWidget {
                               height: 32,
                             ),
                             Container(
-                                padding: EdgeInsets.only(left: 15),
+                                padding: EdgeInsets.only(left: 15, right: 15),
                                 height: 30,
                                 width: 205,
                                 decoration: BoxDecoration(
@@ -82,7 +82,8 @@ class FavoriteStores extends StatelessWidget {
                                       children: [
                                         Expanded(
                                           child: Text(
-                                            'Remover dos favoritos  ',
+                                            'Remover dos favoritos',
+
                                             maxLines: null,
                                             style: TextStyle(
                                               color: Color.fromRGBO(
