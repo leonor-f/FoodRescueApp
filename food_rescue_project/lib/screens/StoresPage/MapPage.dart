@@ -1,22 +1,57 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
-
 import 'package:search_map_location/search_map_location.dart';
 import 'package:search_map_location/utils/google_search/place.dart';
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:latlong2/latlong.dart' as latLng;
-import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:food_rescue/services/MarketDatabaseManager.dart';
-
+import 'package:food_rescue/screens/SpecificStoreProducts/ProductsCategories.dart';
+import 'package:food_rescue/home copy.dart';
+import 'package:food_rescue/screens/StoresPage/BottomPanel.dart';
 
 class MyMapPage extends StatefulWidget {
   @override
   State<MyMapPage> createState() => MapPageState();
+}
+
+List<String> get_current_store_names(List<bool?> current_Store) {
+  List<String> stores = [];
+  if (current_Store[0] == true) {
+    stores.add('Apolónia');
+  }
+  if (current_Store[1] == true) {
+    stores.add('Brio');
+  }
+  if (current_Store[2] == true) {
+    stores.add('Meu Super');
+  }
+  if (current_Store[3] == true) {
+    stores.add('Minipreço');
+  }
+  if (current_Store[4] == true) {
+    stores.add('Continente');
+  }
+  if (current_Store[5] == true) {
+    stores.add('Supercor');
+  }
+  if (current_Store[6] == true) {
+    stores.add('Jumbo');
+  }
+  if (current_Store[7] == true) {
+    stores.add('Froiz');
+  }
+  if (current_Store[8] == true) {
+    stores.add('Lidl');
+  }
+  if (current_Store[9] == true) {
+    stores.add('Pingo Doce');
+  }
+  if (current_Store[10] == true) {
+    stores.add('Intermaché');
+  }
+  return stores;
 }
 
 class MapPageState extends State<MyMapPage> {
@@ -30,32 +65,47 @@ class MapPageState extends State<MyMapPage> {
 
   Future<void> setCustomMarker() async {
     List<Marker> newMarkers = [];
+    List<bool?> current_Stores = BottomPanel.get_current_markers();
+    List<String> current_Stores_Names = get_current_store_names(current_Stores);
 
     for (int i = 0; i < MarketDatabaseManager.allStores.length; i++) {
-      final BitmapDescriptor bitmapDescriptor =
-          await BitmapDescriptor.fromAssetImage(
-        ImageConfiguration(size: Size(1, 1)),
-        MarketDatabaseManager.allStores[i][1],
-      );
+      for (int j = 0; j < current_Stores_Names.length; j++) {
+        if (MarketDatabaseManager.allStores[i][5] == current_Stores_Names[j]) {
+          final BitmapDescriptor bitmapDescriptor =
+              await BitmapDescriptor.fromAssetImage(
+            ImageConfiguration(size: Size(1, 1)),
+            MarketDatabaseManager.allStores[i][1],
+          );
 
-      final Marker marker = Marker(
-        markerId: MarkerId(MarketDatabaseManager.allStores[i][0]),
-        position: LatLng(MarketDatabaseManager.allStores[i][2],
-            MarketDatabaseManager.allStores[i][3]),
-        infoWindow: InfoWindow(title: MarketDatabaseManager.allStores[i][0]),
-        icon: bitmapDescriptor,
-      );
+          String store_name = MarketDatabaseManager.allStores[i][0];
+          final Marker marker = Marker(
+            markerId: MarkerId(MarketDatabaseManager.allStores[i][0]),
+            position: LatLng(MarketDatabaseManager.allStores[i][2],
+                MarketDatabaseManager.allStores[i][3]),
+            infoWindow: InfoWindow(
+                title: 'Abrir Loja: $store_name',
+                onTap: () {
+                  ProductPage.set_store(MarketDatabaseManager.allStores[i][4]);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            MyApp_second_bar(selectedIndex: 0)),
+                  );
+                }),
+            icon: bitmapDescriptor,
+          );
 
-      newMarkers.add(marker);
+          newMarkers.add(marker);
+          break;
+        }
+      }
     }
-
     setState(() {
       _markerSet = true;
       markers = newMarkers.toSet(); // Convert List<Marker> to Set<Marker>
     });
   }
-
-
 
   Future<Position> _getCurrentLocation() async {
     bool serviceEnabled = await Geolocator.isLocationServiceEnabled();
@@ -95,9 +145,7 @@ class MapPageState extends State<MyMapPage> {
       print('Error getting current location: $error');
     });
 
-
     setCustomMarker();
-
   }
 
   @override
@@ -110,7 +158,6 @@ class MapPageState extends State<MyMapPage> {
     );
     return Scaffold(
       body: currentlocation == null
-
           ? const Center(
               child: CircularProgressIndicator(
                   color: Color.fromRGBO(52, 93, 100, 0.6)),
@@ -122,6 +169,9 @@ class MapPageState extends State<MyMapPage> {
                   country: 'PT',
                   language: 'pt',
                   radius: 2,
+                  icon: Icons.place,
+                  iconColor: Color.fromRGBO(52, 93, 100, 1),
+                  placeholder: 'Insira um local',
 
                   //Search only work for this specific country
                   onSelected: (Place place) async {
@@ -135,7 +185,6 @@ class MapPageState extends State<MyMapPage> {
                     controller
                         .animateCamera(CameraUpdate.newLatLng(coordinates));
                   },
-
                 ),
                 Expanded(
                   child: FutureBuilder(
@@ -162,7 +211,6 @@ class MapPageState extends State<MyMapPage> {
                   ),
                 ),
               ],
-
             ),
     );
   }

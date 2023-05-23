@@ -7,6 +7,7 @@ class ProductDatabaseManager {
   static String is_to_buy = 'sim';
   static List<List<dynamic>> currentFavoriteItems = [];
   static List<List<dynamic>> allItems = [];
+  static List<List<dynamic>> allStoreItems = [];
 
   static final ProductDatabaseManager instance = ProductDatabaseManager._init();
 
@@ -78,6 +79,7 @@ class ProductDatabaseManager {
   Future<List<Product>> readAllProducts() async {
     final db = await instance.database;
     final result = await db.query(tableProducts);
+    allItems.clear();
 
     List<Product> products =
         result.map((json) => Product.fromJson(json)).toList();
@@ -178,5 +180,43 @@ class ProductDatabaseManager {
     for (final product in ProductsDatabase.initialProducts) {
       await db.insert(tableProducts, product.toJson());
     }
+  }
+
+  static Future<int> readAllStoreProducts(String store) async {
+    final db = await instance.database;
+    final result = await db.query(tableProducts);
+    allStoreItems.clear();
+
+    List<Product> products =
+        result.map((json) => Product.fromJson(json)).toList();
+
+    for (int i = 0; i < products.length; i++) {
+      final String product_description = products[i].product_description;
+      final String to_buy = products[i].to_buy;
+      final String category = products[i].category;
+      final String product_image = products[i].product_image;
+      final String market_name = products[i].market_name;
+      final String expiration_date = products[i].expiration_date;
+      final double old_price = products[i].old_price;
+      final double new_price = products[i].new_price;
+      final double quantity = products[i].quantity;
+      final String store_image = products[i].store_image;
+
+      if (market_name == store) {
+        allStoreItems.add([
+          product_description,
+          category,
+          product_image,
+          old_price,
+          new_price,
+          expiration_date,
+          market_name,
+          quantity,
+          products[i],
+          store_image,
+        ]);
+      }
+    }
+    return 0;
   }
 }

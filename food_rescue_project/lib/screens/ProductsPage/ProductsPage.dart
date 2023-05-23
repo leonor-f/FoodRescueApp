@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_rescue/screens/ProductsPage/ProductsBottomCard.dart';
-
-
 import 'package:food_rescue/screens/ProductsPage/ProductsCategories.dart';
-
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 class ProductsPage extends StatefulWidget {
@@ -16,6 +13,7 @@ class _ProductsPageState extends State<ProductsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SlidingUpPanel(
+          maxHeight: 240,
           body: ProductPage(),
           panelBuilder: (controller) => BottomPanel(
                 controller: controller,

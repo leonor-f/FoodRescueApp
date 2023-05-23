@@ -15,29 +15,33 @@ class Page1 extends StatelessWidget {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(10),
                   child: Container(
-                    margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                    color: Color.fromRGBO(52, 93, 100, 1),
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height: 50,
-                        ),
-                        Text(
-                          'Procura uma loja e seleciona-a no mapa',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
+                      margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                      color: Color.fromRGBO(52, 93, 100, 1),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            height: 50,
+                          ),
+                          Text(
+                            'Procura uma loja e seleciona-a no mapa',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
                               color: Color.fromRGBO(188, 222, 228, 1),
                               fontSize: 25,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          height: 85,
-                        ),
-                        Lottie.network(
-                            'https://assets8.lottiefiles.com/private_files/lf30_noclpt6t.json'),
-                      ],
-                    ),
-                  ),
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Lottie.asset(
+                                  'assets/animations/tutorial1.json'),
+                            ),
+                          ),
+                        ],
+                      )),
                 ),
               ],
             )));

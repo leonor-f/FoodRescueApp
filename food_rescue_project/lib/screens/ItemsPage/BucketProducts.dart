@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:food_rescue/home.dart';
 import 'package:food_rescue/models/products.dart';
 import 'package:food_rescue/services/ProductsDatabaseManager.dart';
-import 'package:food_rescue/screens/ItemsPage/BucketPage.dart';
-import 'package:food_rescue/main.dart';
 
 class FavoriteProducts extends StatelessWidget {
   final String productDescription;
@@ -89,31 +88,115 @@ class FavoriteProducts extends StatelessWidget {
                             ),
                           )
                         ])),
-                Container(
-                    margin: EdgeInsets.fromLTRB(290, 25, 0, 0),
-                    height: 30,
-                    width: 30,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Color.fromRGBO(255, 255, 255, 0.7)),
-                    child: InkWell(
-                      onTap: () async {
-                        await ProductDatabaseManager.instance
-                            .updateProductToBuy(product, 'não');
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                              content:
-                                  Text('O item foi removido da sua lista')),
-                        );
-                        ProductDatabaseManager.currentFavoriteItems
-                            .remove(product);
-                      },
+                Stack(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.fromLTRB(290, 25, 0, 0),
+                      height: 30,
+                      width: 30,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color.fromRGBO(255, 255, 255, 0.7)),
                       child: Icon(
                         trash,
                         size: 20,
                         color: Color.fromRGBO(106, 107, 117, 1),
                       ),
-                    )),
+                    ),
+                    Container(
+                      margin: EdgeInsets.fromLTRB(290, 25, 0, 0),
+                      height: 30,
+                      width: 30,
+                      child: TextButton(
+                          onPressed: () => showDialog<String>(
+                              context: context,
+                              builder: (BuildContext context) => AlertDialog(
+                                      backgroundColor:
+                                          Color.fromRGBO(188, 222, 228, 1),
+                                      title: const Text(
+                                        'Confirmação',
+                                        style: TextStyle(
+                                            color:
+                                                Color.fromRGBO(52, 93, 100, 1),
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      content: const Text(
+                                        'Tem a certeza que pretende remover este produto dos seus favoritos?',
+                                        style: TextStyle(
+                                          color: Color.fromRGBO(52, 93, 100, 1),
+                                          fontSize: 20,
+                                        ),
+                                      ),
+                                      actions: <Widget>[
+                                        TextButton(
+                                          onPressed: () => Navigator.pop(
+                                              context, 'Cancelar'),
+                                          child: Container(
+                                              padding: EdgeInsets.only(
+                                                  left: 15, right: 15),
+                                              height: 30,
+                                              width: 90,
+                                              decoration: BoxDecoration(
+                                                borderRadius:
+                                                    BorderRadius.circular(15),
+                                                color: Color.fromRGBO(
+                                                    52, 93, 100, 0.5),
+                                              ),
+                                              child: Center(
+                                                  child: Text('Cancelar',
+                                                      style: TextStyle(
+                                                          color: Color.fromRGBO(
+                                                              188, 222, 228, 1),
+                                                          fontWeight: FontWeight
+                                                              .bold)))),
+                                        ),
+                                        TextButton(
+                                            onPressed: () async {
+                                              await ProductDatabaseManager
+                                                  .instance
+                                                  .updateProductToBuy(
+                                                      product, 'não');
+                                              ProductDatabaseManager
+                                                  .currentFavoriteItems
+                                                  .remove(product);
+
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        MyMainApp(
+                                                            selectedIndex: 3)),
+                                              );
+                                            },
+                                            child: Container(
+                                                padding: EdgeInsets.only(
+                                                    left: 15, right: 15),
+                                                height: 30,
+                                                width: 60,
+                                                decoration: BoxDecoration(
+                                                  borderRadius:
+                                                      BorderRadius.circular(15),
+                                                  color: Color.fromRGBO(
+                                                      52, 93, 100, 0.5),
+                                                ),
+                                                child: Center(
+                                                    child: Text('Sim',
+                                                        style: TextStyle(
+                                                            color:
+                                                                Color.fromRGBO(
+                                                                    188,
+                                                                    222,
+                                                                    228,
+                                                                    1),
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .bold)))))
+                                      ])),
+                          child: Text('  ')),
+                    )
+                  ],
+                )
               ],
             )),
       ),

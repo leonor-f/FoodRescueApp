@@ -3,7 +3,7 @@ import 'package:food_rescue/screens/ProductsPage/ProductsBottomCard.dart';
 import 'package:food_rescue/screens/ProductsPage/ProductStores.dart';
 import 'dart:async';
 import 'package:food_rescue/services/ProductsDatabaseManager.dart';
-import 'package:food_rescue/models/products.dart';
+import 'package:lottie/lottie.dart';
 
 bool mercearia = true;
 bool bio = false;
@@ -25,7 +25,6 @@ class ProductPage extends StatefulWidget {
 
 class _ProductPageState extends State<ProductPage> {
   static List<List<dynamic>> allproducts = ProductDatabaseManager.allItems;
-  late List<Product> products = [];
   static List<List<dynamic>> itemsCategory = [];
   bool isLoading = false;
   int itemcount = 0;
@@ -43,11 +42,9 @@ class _ProductPageState extends State<ProductPage> {
     super.dispose();
   }
 
-  void refreshCategory() async {
-    setState(() => isLoading = true);
-    readAllProducts();
-    itemcount = itemsCategory.length;
-    setState(() => isLoading = false);
+  Future<bool> update() async {
+    refreshCategory();
+    return Future.value(true);
   }
 
   @override
@@ -102,6 +99,23 @@ class _ProductPageState extends State<ProductPage> {
         ]);
       }
     }
+  }
+
+  void refreshCategory() async {
+    setState(() => isLoading = true);
+    itemsCategory.clear();
+    readAllProducts();
+    itemcount = itemsCategory.length;
+    if (BottomPanel.order_by == 0) {
+      itemsCategory.sort((a, b) => a[4].compareTo(b[4]));
+    } else if (BottomPanel.order_by == 1) {
+      itemsCategory.sort((a, b) => b[4].compareTo(a[4]));
+    } else if (BottomPanel.order_by == 2) {
+      itemsCategory.sort((a, b) => a[5].compareTo(b[5]));
+    } else {
+      itemsCategory.sort((a, b) => b[5].compareTo(a[5]));
+    }
+    setState(() => isLoading = false);
   }
 
   @override
@@ -495,22 +509,62 @@ class _ProductPageState extends State<ProductPage> {
                 ],
               )),
           Expanded(
-            child: ListView.builder(
-                itemCount: itemcount,
-                itemBuilder: (context, index) {
-                  return ProductStores(
-                    productDescription: itemsCategory[index][0],
-                    productCategory: itemsCategory[index][1],
-                    productImage: itemsCategory[index][2],
-                    oldPrice: itemsCategory[index][3],
-                    newPrice: itemsCategory[index][4],
-                    expirationDate: itemsCategory[index][5],
-                    marketName: itemsCategory[index][6],
-                    productQuantity: itemsCategory[index][7],
-                    product: itemsCategory[index][8],
-                  );
-                }),
-          )
+              child: RefreshIndicator(
+                  onRefresh: () async => await update(),
+                  color: Color.fromRGBO(188, 222, 228, 1),
+                  child: (itemcount == 0)
+                      ? Container(
+                          margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                          color: Color.fromRGBO(52, 93, 100, 0),
+                          child: Column(
+                            children: [
+                              SizedBox(
+                                height: 85,
+                              ),
+                              Container(
+                                height: 100,
+                                width: 100,
+                                color: Color.fromRGBO(52, 93, 100, 0),
+                                child:
+                                    Lottie.asset('assets/animations/sad.json'),
+                              ),
+                              SizedBox(
+                                height: 40,
+                              ),
+                              Text(
+                                'Nenhum produto disponível nesta categoria.',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Color.fromRGBO(153, 146, 146, 0.8),
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              Text(
+                                'Tente voltar mais tarde.',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Color.fromRGBO(153, 146, 146, 0.8),
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        )
+                      : ListView.builder(
+                          itemCount: itemcount,
+                          itemBuilder: (context, index) {
+                            return ProductStores(
+                              productDescription: itemsCategory[index][0],
+                              productCategory: itemsCategory[index][1],
+                              productImage: itemsCategory[index][2],
+                              oldPrice: itemsCategory[index][3],
+                              newPrice: itemsCategory[index][4],
+                              expirationDate: itemsCategory[index][5],
+                              marketName: itemsCategory[index][6],
+                              productQuantity: itemsCategory[index][7],
+                              product: itemsCategory[index][8],
+                            );
+                          }))),
         ],
       ),
     );

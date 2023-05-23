@@ -1,4 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:food_rescue/home.dart';
+
+bool? _apolonia = true;
+bool? _brio = true;
+bool? _meusuper = true;
+bool? _minipreco = true;
+bool? _continente = true;
+bool? _supercor = true;
+bool? _jumbo = true;
+bool? _froiz = true;
+bool? _lidl = true;
+bool? _pingodoce = true;
+bool? _intermache = true;
+
+bool? _less5 = false;
+bool? _5to10 = false;
+bool? _more10 = false;
 
 class BottomPanel extends StatefulWidget {
   final ScrollController controller;
@@ -7,27 +24,35 @@ class BottomPanel extends StatefulWidget {
     required this.controller,
   }) : super(key: key);
 
+  static List<bool?> get_current_markers() {
+    List<bool?> current_Stores = [
+      _apolonia,
+      _brio,
+      _meusuper,
+      _minipreco,
+      _continente,
+      _supercor,
+      _jumbo,
+      _froiz,
+      _lidl,
+      _pingodoce,
+      _intermache
+    ];
+
+    return current_Stores;
+  }
+
+  static List<bool?> get_current_distance() {
+    List<bool?> current_distance = [_less5, _5to10, _more10];
+
+    return current_distance;
+  }
+
   @override
   _BottomPanelState createState() => _BottomPanelState();
 }
 
 class _BottomPanelState extends State<BottomPanel> {
-  bool? _apolonia = false;
-  bool? _brio = false;
-  bool? _meusuper = false;
-  bool? _minipreco = false;
-  bool? _continente = false;
-  bool? _supercor = false;
-  bool? _jumbo = false;
-  bool? _froiz = false;
-  bool? _lidl = false;
-  bool? _pingodoce = false;
-  bool? _intermache = false;
-
-  bool? _less5 = false;
-  bool? _5to10 = false;
-  bool? _more10 = false;
-
   @override
   Widget build(BuildContext context) => ListView(
         padding: EdgeInsets.zero,
@@ -54,7 +79,7 @@ class _BottomPanelState extends State<BottomPanel> {
           SizedBox(
             height: 10,
           ),
-          ClipRRect(
+          /*ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: Container(
                 padding:
@@ -97,6 +122,7 @@ class _BottomPanelState extends State<BottomPanel> {
                                   onChanged: (value) {
                                     setState(() {
                                       _less5 = value;
+                                      MyMainApp(selectedIndex: 0);
                                     });
                                   })
                             ]))),
@@ -124,6 +150,7 @@ class _BottomPanelState extends State<BottomPanel> {
                                   onChanged: (value) {
                                     setState(() {
                                       _5to10 = value;
+                                      MyMainApp(selectedIndex: 0);
                                     });
                                   })
                             ]))),
@@ -151,12 +178,13 @@ class _BottomPanelState extends State<BottomPanel> {
                                   onChanged: (value) {
                                     setState(() {
                                       _more10 = value;
+                                      MyMainApp(selectedIndex: 0);
                                     });
                                   })
                             ]))),
                       ])
                     ])),
-          ),
+          ),*/
           SizedBox(
             height: 10,
           ),
@@ -203,6 +231,7 @@ class _BottomPanelState extends State<BottomPanel> {
                                     onChanged: (value) {
                                       setState(() {
                                         _apolonia = value;
+                                        MyMainApp(selectedIndex: 0);
                                       });
                                     })
                               ]))),
@@ -230,6 +259,7 @@ class _BottomPanelState extends State<BottomPanel> {
                                     onChanged: (value) {
                                       setState(() {
                                         _jumbo = value;
+                                        MyMainApp(selectedIndex: 0);
                                       });
                                     })
                               ]))),
@@ -257,6 +287,7 @@ class _BottomPanelState extends State<BottomPanel> {
                                     onChanged: (value) {
                                       setState(() {
                                         _meusuper = value;
+                                        MyMainApp(selectedIndex: 0);
                                       });
                                     }),
                               ]))),
@@ -284,6 +315,7 @@ class _BottomPanelState extends State<BottomPanel> {
                                     onChanged: (value) {
                                       setState(() {
                                         _minipreco = value;
+                                        MyMainApp(selectedIndex: 0);
                                       });
                                     })
                               ]))),
@@ -311,6 +343,7 @@ class _BottomPanelState extends State<BottomPanel> {
                                     onChanged: (value) {
                                       setState(() {
                                         _continente = value;
+                                        MyMainApp(selectedIndex: 0);
                                       });
                                     })
                               ]))),
@@ -338,6 +371,7 @@ class _BottomPanelState extends State<BottomPanel> {
                                     onChanged: (value) {
                                       setState(() {
                                         _supercor = value;
+                                        MyMainApp(selectedIndex: 0);
                                       });
                                     })
                               ]))),
@@ -365,6 +399,7 @@ class _BottomPanelState extends State<BottomPanel> {
                                     onChanged: (value) {
                                       setState(() {
                                         _brio = value;
+                                        MyMainApp(selectedIndex: 0);
                                       });
                                     })
                               ]))),
@@ -392,6 +427,7 @@ class _BottomPanelState extends State<BottomPanel> {
                                     onChanged: (value) {
                                       setState(() {
                                         _froiz = value;
+                                        MyMainApp(selectedIndex: 0);
                                       });
                                     })
                               ]))),
@@ -419,6 +455,7 @@ class _BottomPanelState extends State<BottomPanel> {
                                     onChanged: (value) {
                                       setState(() {
                                         _lidl = value;
+                                        MyMainApp(selectedIndex: 0);
                                       });
                                     })
                               ]))),
@@ -446,6 +483,7 @@ class _BottomPanelState extends State<BottomPanel> {
                                     onChanged: (value) {
                                       setState(() {
                                         _pingodoce = value;
+                                        MyMainApp(selectedIndex: 0);
                                       });
                                     })
                               ]))),
@@ -473,6 +511,7 @@ class _BottomPanelState extends State<BottomPanel> {
                                     onChanged: (value) {
                                       setState(() {
                                         _intermache = value;
+                                        MyMainApp(selectedIndex: 0);
                                       });
                                     })
                               ]))),
