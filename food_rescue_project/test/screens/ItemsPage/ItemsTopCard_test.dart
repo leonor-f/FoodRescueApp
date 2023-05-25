@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:food_rescue/screens/ItemsPage/BucketTopCard.dart';
+import 'package:food_rescue/screens/ItemsPage/ItemsTopCard.dart';
 
 void main() {
   testWidgets('TopCard displays the correct text', (WidgetTester tester) async {

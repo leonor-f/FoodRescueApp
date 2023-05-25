@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:food_rescue/models/products.dart';
-import 'package:food_rescue/screens/ItemsPage/BucketProducts.dart';
+import 'package:food_rescue/screens/ItemsPage/ItemsProducts.dart';
 import 'package:food_rescue/services/ProductsDatabaseManager.dart';
 import 'package:food_rescue/models/products.dart';
 

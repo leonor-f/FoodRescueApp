@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'BucketTopCard.dart';
-import 'BucketProducts.dart';
+import 'ItemsTopCard.dart';
+import 'ItemsProducts.dart';
 import 'package:food_rescue/services/ProductsDatabaseManager.dart';
 import 'package:food_rescue/models/products.dart';
 import 'package:lottie/lottie.dart';

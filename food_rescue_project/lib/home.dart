@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_rescue/screens/StoresPage/StoresPage.dart';
 import 'screens/FavoritesPage/FavoritesPage.dart';
 import 'screens/ProductsPage/ProductsPage.dart';
-import 'screens/ItemsPage/BucketPage.dart';
+import 'screens/ItemsPage/ItemsPage.dart';
 
 class MyMainApp extends StatelessWidget {
   final int selectedIndex;

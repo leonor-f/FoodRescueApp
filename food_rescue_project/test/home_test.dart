@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:food_rescue/home.dart';
 import 'package:food_rescue/screens/FavoritesPage/FavoritesPage.dart';
-import 'package:food_rescue/screens/ItemsPage/BucketPage.dart';
+import 'package:food_rescue/screens/ItemsPage/ItemsPage.dart';
 import 'package:food_rescue/screens/ProductsPage/ProductsPage.dart';
 import 'package:food_rescue/screens/StoresPage/StoresPage.dart';
 
