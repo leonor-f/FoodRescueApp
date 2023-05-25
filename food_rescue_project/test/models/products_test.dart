@@ -5,16 +5,16 @@ void main() {
   group('Product class tests', () {
     test('Product toJson method works as expected', () {
       final product = Product(
-        market_name: 'Supermarket',
-        product_description: 'Product Description',
-        old_price: 5.99,
-        new_price: 4.99,
-        quantity: 1.0,
-        expiration_date: '2023-04-17',
-        to_buy: 'Yes',
-        category: 'Groceries',
-        product_image: 'product.jpg',
-      );
+          market_name: 'Supermarket',
+          product_description: 'Product Description',
+          old_price: 5.99,
+          new_price: 4.99,
+          quantity: 1.0,
+          expiration_date: '2023-04-17',
+          to_buy: 'Yes',
+          category: 'Groceries',
+          product_image: 'product.jpg',
+          store_image: 'store.jpg');
 
       final json = product.toJson();
 
@@ -27,6 +27,7 @@ void main() {
       expect(json[ProductsFields.to_buy], 'Yes');
       expect(json[ProductsFields.category], 'Groceries');
       expect(json[ProductsFields.product_image], 'product.jpg');
+      expect(json[ProductsFields.store_image], 'store.jpg');
     });
 
     test('Product fromJson method works as expected', () {
@@ -41,6 +42,7 @@ void main() {
         ProductsFields.to_buy: 'Yes',
         ProductsFields.category: 'Groceries',
         ProductsFields.product_image: 'product.jpg',
+        ProductsFields.store_image: 'store.jpg'
       };
 
       final product = Product.fromJson(json);
@@ -55,20 +57,21 @@ void main() {
       expect(product.to_buy, 'Yes');
       expect(product.category, 'Groceries');
       expect(product.product_image, 'product.jpg');
+      expect(product.store_image, 'store.jpg');
     });
 
     test('Product copy method works as expected', () {
       final product = Product(
-        market_name: 'Supermarket',
-        product_description: 'Product Description',
-        old_price: 5.99,
-        new_price: 4.99,
-        quantity: 1.0,
-        expiration_date: '2023-04-17',
-        to_buy: 'Yes',
-        category: 'Groceries',
-        product_image: 'product.jpg',
-      );
+          market_name: 'Supermarket',
+          product_description: 'Product Description',
+          old_price: 5.99,
+          new_price: 4.99,
+          quantity: 1.0,
+          expiration_date: '2023-04-17',
+          to_buy: 'Yes',
+          category: 'Groceries',
+          product_image: 'product.jpg',
+          store_image: 'store.jpg');
 
       final copiedProduct = product.copy(
         market_name: 'New Supermarket',
@@ -85,6 +88,7 @@ void main() {
       expect(copiedProduct.to_buy, product.to_buy);
       expect(copiedProduct.category, product.category);
       expect(copiedProduct.product_image, product.product_image);
+      expect(copiedProduct.store_image, product.store_image);
     });
   });
 }

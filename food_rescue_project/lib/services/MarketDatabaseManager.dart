@@ -55,7 +55,7 @@ class MarketDatabaseManager {
     return market.copy(id: id);
   }
 
-  Future<Market> readMarket(int id) async {
+  static Future<Market> readMarket(int id) async {
     final db = await instance.database;
 
     final maps = await db.query(
@@ -75,6 +75,7 @@ class MarketDatabaseManager {
   Future<List<Market>> readAllMarkets() async {
     final db = await instance.database;
     final result = await db.query(tableMarkets);
+    allStores.clear();
 
     List<Market> markets = result.map((json) => Market.fromJson(json)).toList();
 
@@ -90,7 +91,8 @@ class MarketDatabaseManager {
       final double marketLongitude = markets[i].market_longitude;
       final String markerPin = markets[i].store_pin;
 
-      allStores.add([storeName, markerPin, marketLatitude, marketLongitude]);
+      allStores.add(
+          [storeName, markerPin, marketLatitude, marketLongitude, markets[i], marketChainName]);
 
       if (favourite == isFavorite) {
         currentFavoriteStores.add([storeName, storeImage, markets[i]]);
@@ -111,13 +113,13 @@ class MarketDatabaseManager {
     );
   }
 
-  Future updateFavoriteMarket(Market market) async {
+  Future updateFavoriteMarket(Market market, String favorite) async {
     final market_ = market.copy(
         market_chain_name: market.market_chain_name,
         market_name: market.market_name,
         market_latitude: market.market_latitude,
         market_longitude: market.market_longitude,
-        is_favorite: 'não',
+        is_favorite: favorite,
         store_image: market.store_image);
 
     await update(market_);

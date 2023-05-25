@@ -30,8 +30,7 @@ class Page3 extends StatelessWidget {
                   SizedBox(
                     height: 50,
                   ),
-                  Lottie.network(
-                      'https://assets8.lottiefiles.com/packages/lf20_bnwxm2d1.json'),
+                  Lottie.asset('assets/animations/tutorial3.json')
                 ],
               ),
             ),

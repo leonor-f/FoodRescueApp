@@ -14,6 +14,7 @@ void main() {
         market_longitude: -1.2345,
         is_favorite: 'sim',
         store_image: 'test.jpg',
+        store_pin: 'test.jpg',
       );
       expect(market.market_chain_name, 'Test Chain');
       expect(market.market_name, 'Test Market');
@@ -21,6 +22,7 @@ void main() {
       expect(market.market_longitude, -1.2345);
       expect(market.is_favorite, 'sim');
       expect(market.store_image, 'test.jpg');
+      expect(market.store_pin, 'test.jpg');
     });
 
     test('should convert to and from JSON', () {
@@ -32,6 +34,7 @@ void main() {
         MarketsFields.market_longitude: -1.2345,
         MarketsFields.is_favorite: 'sim',
         MarketsFields.store_image: 'test.jpg',
+        MarketsFields.store_pin: 'test.jpg',
       };
       final market = Market.fromJson(json);
       expect(market.id, 1);
@@ -41,6 +44,7 @@ void main() {
       expect(market.market_longitude, -1.2345);
       expect(market.is_favorite, 'sim');
       expect(market.store_image, 'test.jpg');
+      expect(market.store_pin, 'test.jpg');
       expect(market.toJson(), json);
     });
   });

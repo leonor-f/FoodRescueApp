@@ -1,12 +1,16 @@
 import 'package:flutter_test/flutter_test.dart';
-import '../lib/main.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:food_rescue/main.dart';
+import 'package:food_rescue/tutorial/ControllerScreen.dart';
+import 'package:food_rescue/home.dart';
 
 void main() {
-  group('MyApp', () {
-    testWidgets('Renders MyStatefulWidget as home',
-        (WidgetTester tester) async {
-      await tester.pumpWidget(const MyApp());
-      expect(find.byType(MyStatefulWidget), findsOneWidget);
-    });
+  testWidgets('MyApp builds correctly when showHome is false', (tester) async {
+    SharedPreferences.setMockInitialValues({'showHome': false});
+
+    await tester.pumpWidget(MyApp(showHome: false));
+
+    expect(find.byType(MyMainApp), findsNothing);
+    expect(find.byType(HomePage), findsOneWidget);
   });
 }

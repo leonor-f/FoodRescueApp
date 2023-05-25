@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.food_rescue">
    <application
-        android:label="food_rescue"
+        android:label="Food Rescue"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
 

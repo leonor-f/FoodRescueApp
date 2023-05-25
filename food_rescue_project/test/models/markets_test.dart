@@ -11,6 +11,7 @@ void main() {
         market_longitude: -122.4194,
         is_favorite: 'false',
         store_image: 'https://example.com/test-image.jpg',
+        store_pin: 'https://example.com/test-image.jpg',
       );
 
       expect(market.market_chain_name, 'Test Market Chain');
@@ -19,6 +20,7 @@ void main() {
       expect(market.market_longitude, -122.4194);
       expect(market.is_favorite, 'false');
       expect(market.store_image, 'https://example.com/test-image.jpg');
+      expect(market.store_pin, 'https://example.com/test-image.jpg');
     });
 
     test('Market model copy method works as expected', () {
@@ -30,6 +32,7 @@ void main() {
         market_longitude: -122.4194,
         is_favorite: 'false',
         store_image: 'https://example.com/test-image.jpg',
+        store_pin: 'https://example.com/test-image.jpg',
       );
 
       final updatedMarket = market.copy(
@@ -45,6 +48,7 @@ void main() {
       expect(updatedMarket.market_longitude, -122.4194);
       expect(updatedMarket.is_favorite, 'true');
       expect(updatedMarket.store_image, 'https://example.com/test-image.jpg');
+      expect(updatedMarket.store_pin, 'https://example.com/test-image.jpg');
     });
   });
 
@@ -56,6 +60,7 @@ void main() {
     market_longitude: 67.890,
     is_favorite: 'yes',
     store_image: 'test_image.jpg',
+    store_pin: 'test_image.jpg',
   );
 
   test('fromJson method works as expected', () {
@@ -67,6 +72,7 @@ void main() {
       'market_longitude': 67.890,
       'is_favorite': 'yes',
       'store_image': 'test_image.jpg',
+      'store_pin': 'test_image.jpg'
     };
 
     final result = Market.fromJson(jsonMap);
@@ -78,6 +84,7 @@ void main() {
     expect(result.market_longitude, tMarket.market_longitude);
     expect(result.is_favorite, tMarket.is_favorite);
     expect(result.store_image, tMarket.store_image);
+    expect(result.store_pin, tMarket.store_pin);
   });
 
   test('toJson method works as expected', () {
@@ -91,6 +98,7 @@ void main() {
       'market_longitude': 67.890,
       'is_favorite': 'yes',
       'store_image': 'test_image.jpg',
+      'store_pin': 'test_image.jpg'
     };
 
     expect(result, expectedJsonMap);
