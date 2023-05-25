@@ -64,22 +64,23 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.place_outlined),
+            icon: Icon(key: Key('store_page_button'), Icons.place_outlined),
             label: 'Lojas',
             backgroundColor: Color.fromRGBO(230, 242, 244, 1),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_basket_outlined),
+            icon:
+                Icon(key: Key('products_page_button'), Icons.shopping_basket_outlined),
             label: 'Produtos',
             backgroundColor: Color.fromRGBO(230, 242, 244, 1),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_border),
+            icon: Icon(key: Key('favorites_page_button'), Icons.favorite_border),
             label: 'Favoritos',
             backgroundColor: Color.fromRGBO(230, 242, 244, 1),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.receipt_long_outlined),
+            icon: Icon(key: Key('items_page_button'), Icons.receipt_long_outlined),
             label: 'Items',
             backgroundColor: Color.fromRGBO(230, 242, 244, 1),
           ),

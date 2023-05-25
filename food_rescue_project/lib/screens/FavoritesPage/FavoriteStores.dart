@@ -29,6 +29,7 @@ class FavoriteStores extends StatelessWidget {
             width: 360,
             child: Stack(children: [
               Container(
+                key: Key('supermarket'),
                 height: 90,
                 width: 90,
                 decoration: BoxDecoration(
@@ -161,6 +162,7 @@ class FavoriteStores extends StatelessWidget {
                                   children: [
                                     Expanded(
                                       child: Text(
+                                        key: Key('remover_loja'),
                                         'Remover dos favoritos',
                                         maxLines: null,
                                         style: TextStyle(

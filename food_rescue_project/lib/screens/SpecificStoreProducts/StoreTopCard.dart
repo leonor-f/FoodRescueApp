@@ -59,6 +59,7 @@ class _TopCardState extends State<TopCard> {
               ),
             )),
         TextButton(
+          key: Key('addfavoritestore'),
           onPressed: () => showDialog<String>(
             context: context,
             builder: (BuildContext context) => AlertDialog(

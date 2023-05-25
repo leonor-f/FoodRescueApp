@@ -40,6 +40,7 @@ class FavoriteProducts extends StatelessWidget {
             child: Stack(
               children: [
                 Container(
+                  key: Key('product_favorite'),
                   margin: EdgeInsets.fromLTRB(0, 25, 0, 0),
                   height: 30,
                   width: 30,
@@ -98,6 +99,7 @@ class FavoriteProducts extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                           color: Color.fromRGBO(255, 255, 255, 0.7)),
                       child: Icon(
+                        key: Key('trashbutton'),
                         trash,
                         size: 20,
                         color: Color.fromRGBO(106, 107, 117, 1),
@@ -111,6 +113,7 @@ class FavoriteProducts extends StatelessWidget {
                           onPressed: () => showDialog<String>(
                               context: context,
                               builder: (BuildContext context) => AlertDialog(
+                                      key: Key('dialog_remove_product'),
                                       backgroundColor:
                                           Color.fromRGBO(188, 222, 228, 1),
                                       title: const Text(
@@ -182,6 +185,8 @@ class FavoriteProducts extends StatelessWidget {
                                                 ),
                                                 child: Center(
                                                     child: Text('Sim',
+                                                        key: Key(
+                                                            'product_remove_confimartion'),
                                                         style: TextStyle(
                                                             color:
                                                                 Color.fromRGBO(

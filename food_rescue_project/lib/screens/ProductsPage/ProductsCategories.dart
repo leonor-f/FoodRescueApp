@@ -322,6 +322,7 @@ class _ProductPageState extends State<ProductPage> {
                         ))),
                   ),
                   InkWell(
+                    key: Key('refeiçoes'),
                     onTap: () {
                       setState(() {
                         mercearia = false;

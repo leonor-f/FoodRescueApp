@@ -43,6 +43,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: Key('favorites_page'),
       backgroundColor: Colors.white,
       body: Column(
         children: [

@@ -79,112 +79,6 @@ class _BottomPanelState extends State<BottomPanel> {
           SizedBox(
             height: 10,
           ),
-          /*ClipRRect(
-            borderRadius: BorderRadius.circular(20),
-            child: Container(
-                padding:
-                    EdgeInsets.only(left: 20, top: 20, right: 20, bottom: 20),
-                color: Color.fromRGBO(230, 242, 244, 1),
-                height: 110,
-                width: 360,
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Distância:',
-                        style: TextStyle(
-                          color: Color.fromRGBO(52, 93, 100, 1),
-                          fontSize: 15,
-                        ),
-                      ),
-                      Wrap(direction: Axis.horizontal, children: [
-                        Container(
-                            height: 40,
-                            width: 82,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(40),
-                              color: Color.fromRGBO(188, 222, 228, 0.6),
-                            ),
-                            margin: EdgeInsets.fromLTRB(0, 10, 10, 0),
-                            padding: EdgeInsets.fromLTRB(15, 0, 0, 0),
-                            child: Center(
-                                child: Row(children: [
-                              Text(
-                                '< 5',
-                                style: TextStyle(
-                                  color: Color.fromRGBO(52, 93, 100, 1),
-                                  fontSize: 13,
-                                ),
-                              ),
-                              Checkbox(
-                                  activeColor: Color.fromRGBO(52, 93, 100, 1),
-                                  value: _less5,
-                                  onChanged: (value) {
-                                    setState(() {
-                                      _less5 = value;
-                                      MyMainApp(selectedIndex: 0);
-                                    });
-                                  })
-                            ]))),
-                        Container(
-                            height: 40,
-                            width: 100,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(40),
-                              color: Color.fromRGBO(188, 222, 228, 0.6),
-                            ),
-                            margin: EdgeInsets.fromLTRB(0, 10, 10, 0),
-                            padding: EdgeInsets.fromLTRB(15, 0, 0, 0),
-                            child: Center(
-                                child: Row(children: [
-                              Text(
-                                '5 - 10',
-                                style: TextStyle(
-                                  color: Color.fromRGBO(52, 93, 100, 1),
-                                  fontSize: 13,
-                                ),
-                              ),
-                              Checkbox(
-                                  activeColor: Color.fromRGBO(52, 93, 100, 1),
-                                  value: _5to10,
-                                  onChanged: (value) {
-                                    setState(() {
-                                      _5to10 = value;
-                                      MyMainApp(selectedIndex: 0);
-                                    });
-                                  })
-                            ]))),
-                        Container(
-                            height: 40,
-                            width: 90,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(40),
-                              color: Color.fromRGBO(188, 222, 228, 0.6),
-                            ),
-                            margin: EdgeInsets.fromLTRB(0, 10, 10, 0),
-                            padding: EdgeInsets.fromLTRB(15, 0, 0, 0),
-                            child: Center(
-                                child: Row(children: [
-                              Text(
-                                '> 10',
-                                style: TextStyle(
-                                  color: Color.fromRGBO(52, 93, 100, 1),
-                                  fontSize: 13,
-                                ),
-                              ),
-                              Checkbox(
-                                  activeColor: Color.fromRGBO(52, 93, 100, 1),
-                                  value: _more10,
-                                  onChanged: (value) {
-                                    setState(() {
-                                      _more10 = value;
-                                      MyMainApp(selectedIndex: 0);
-                                    });
-                                  })
-                            ]))),
-                      ])
-                    ])),
-          ),*/
           SizedBox(
             height: 10,
           ),
@@ -219,6 +113,7 @@ class _BottomPanelState extends State<BottomPanel> {
                               child: Center(
                                   child: Row(children: [
                                 Text(
+                                  key: Key('Apolónia'),
                                   'Apolónia',
                                   style: TextStyle(
                                     color: Color.fromRGBO(52, 93, 100, 1),

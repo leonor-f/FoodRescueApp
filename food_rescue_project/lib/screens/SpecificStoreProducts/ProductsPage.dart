@@ -12,6 +12,7 @@ class _ProductsPageState extends State<ProductsPagee> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: Key('Specific_Store_page'),
       body: SlidingUpPanel(
           maxHeight: 240,
           body: ProductPage(),

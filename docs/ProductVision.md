@@ -12,16 +12,16 @@
 
 ## Vision Stament
 
-Food Rescue brings together various supermarkets in a nearby area and presents the food products nearing expiration date and respective prices from the supermarket chosen by the consumer. This Application is designed for anyone who wants to save money while helping the environment by reducing food waste.
+Food Rescue connects local supermarkets, displaying near-expiry food items and prices chosen by consumers. This app saves money and reduces food waste, benefiting both your wallet and the environment.
 
 ## Main Features
- - Feature 1 - Map of **nearby supermarkets**
- - Feature 2 - List of **food products near expiration dates** in the selected supermarket and respective **prices**
- - Feature 3 - **Price and expiry date filters**
- - Feature 4 - Select all **user's favorite items** and **store them in a list**
- - Feature 5 - List of **users' favorite supermarkets**
+ - Feature 1 - Map with all **nearby supermarkets**.
+ - Feature 2 - Users can **filter the market chains** they want to see in the map.
+ - Feature 3 - List of **food items near expiration date** in the selected supermarket and respective **prices**.
+ - Feature 4 - **Price and expiry date filters** in the products page.
+ - Feature 5 - List of all **user's favorite prodcuts** and **store them in a list**.
+ - Feature 6 - List of all **user's favorite supermarkets**.
+ - Feature 7 - **Tutorial Pages**.
 
 ## Required API's
 - Google Maps
-- Google Directions
-- Google Sheets

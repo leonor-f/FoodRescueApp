@@ -45,6 +45,7 @@ class _BucketPageState extends State<BucketPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: Key('items_page'),
       backgroundColor: Colors.white,
       body: Column(
         children: [

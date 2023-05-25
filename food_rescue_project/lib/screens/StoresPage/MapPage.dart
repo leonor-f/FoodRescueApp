@@ -165,6 +165,7 @@ class MapPageState extends State<MyMapPage> {
           : Column(
               children: [
                 SearchLocation(
+                  key: Key('search_store'),
                   apiKey: "AIzaSyAZuzBWclgvDEnOnbv3dSovhuITszHRoRg",
                   country: 'PT',
                   language: 'pt',
@@ -187,6 +188,7 @@ class MapPageState extends State<MyMapPage> {
                   },
                 ),
                 Expanded(
+                  key: Key('map'),
                   child: FutureBuilder(
                     future: setCustomMarker(),
                     builder: (context, snapshot) {
