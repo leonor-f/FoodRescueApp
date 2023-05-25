@@ -15,8 +15,9 @@ You can find here details about the product (or mini-app or module), from a high
   * [Logical architecture](https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/docs/ArchitectureAndDesign.md#Logical-architecture)
   * [Physical architecture](https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/docs/ArchitectureAndDesign.md#Physical-architecture)
   * [Vertical prototype](https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/docs/ArchitectureAndDesign.md#Vertical-prototype)
-* [Implementation]
-* [Test]
+* [Implementation](https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/food_rescue_project)
+* [Unit Test](https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/food_rescue_project/test)
+* [Acceptance Test](https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/food_rescue_project/test_driver)
 * [Configuration and change management]
 * [Project management](https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/docs/ProjectManagement.md)
 
