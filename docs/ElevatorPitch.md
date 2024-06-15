@@ -1,0 +1,8 @@
+## Elevator Pitch
+Are you tired of witnessing the **global problem of food waste** without a viable solution in sight? What if I told you we have an app designed specifically for Portugal that tackles this issue head-on? Introducing our **revolutionary solution**: an app that not only **reduces food waste but also saves you money**.
+
+Imagine having access to a wide range of food products nearing their expiration date, all conveniently displayed on our app. With our app, you can **create a personalized shopping list** of these discounted products from your favorite supermerkets, allowing you to save a substantial amount of money on your grocery bills. But it doesn't end there – by actively participating, you become part of the movement to **break the cycle of food waste** and contribute to a more sustainable future.
+
+What sets our app apart is our **innovative approach**. Unlike other apps, we specifically focus on products that are typically marginalized due to their expiration date but still maintain the **same quality**. Our app values these products by offering them at a lower price, giving you the opportunity to enjoy high-quality food while reducing waste.
+
+Join us in the fight against food waste and become a **conscious consumer**. Together, we can make a significant impact on the environment while saving money. Our app is here to transform the way we shop, one product at a time.
