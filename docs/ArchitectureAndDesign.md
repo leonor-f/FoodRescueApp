@@ -1,7 +1,7 @@
 ## Architecture and Design
 
 ### Logical architecture
-![LogicalView](images/LogicalView.png)
+![LogicalView](https://github.com/leonor-f/FoodRescueApp/blob/77001ba3b30f71ac2ad4031d2f452ee6eab50b65/images/LogicalView.png)
 
 - `Food Rescue UI`: visualize application pages
 - `Food Rescue Database`: database with the supermarkets info (name and address) and respective food products
@@ -20,7 +20,7 @@ items from the Products Database, and updating new products depending on their a
 
 The **Google Server** node locates the user spatially through the Google Maps and Google Directions APIs, and stores the data necessary for the services in the Google Sheets API.
 
-![DeploymentView](images/DeploymentView.png)
+![DeploymentView](https://github.com/leonor-f/FoodRescueApp/blob/77001ba3b30f71ac2ad4031d2f452ee6eab50b65/images/DeploymentView.png)
 
 
 ### Vertical prototype
