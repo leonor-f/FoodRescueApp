@@ -40,4 +40,7 @@ on the app's "Favoritos" page, as shown below.
 Since we also needed to use a map in one of the main pages of the project, so that the user can visualize the
 supermarkets nearby, we decided to already implement the Google Maps API, as shown below on the "Lojas" page.
 
-![ezgif com-video-to-gif](https://user-images.githubusercontent.com/93678161/226060412-1b9d09eb-84fb-49c1-8da8-b98fd5425242.gif)  |  ![f3](https://user-images.githubusercontent.com/93678161/225103816-7987fc53-eb12-4f3e-a0c3-97ce18b920fe.png)
+<p align="center" justify="center">
+  <img width="200" src="https://user-images.githubusercontent.com/93678161/226060412-1b9d09eb-84fb-49c1-8da8-b98fd5425242.gif"/>
+  <img width="223" src="https://github.com/leonor-f/FoodRescueApp/assets/114422678/92b79c50-36cc-429a-b2b3-06519133ae57"/>
+</p>
