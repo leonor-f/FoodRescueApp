@@ -13,6 +13,6 @@ that registers whether the product is in stock or not (**available**). Each prod
 different types: **Vegetables**; **Fruits**; **Fats**; **Dairy**; Meat, fish and eggs (**MeatFishEggs**
 class); **Carbs**; **Drinks**, that belong to the **Category** class.
 
- <p align="center" justify="center">
-  <img src="https://github.com/FEUP-LEIC-ES-2022-23/2LEIC09T3/blob/main/images/DomainModel.png"/>
+<p align="center" justify="center">
+  <img src="https://github.com/leonor-f/FoodRescueApp/blob/77001ba3b30f71ac2ad4031d2f452ee6eab50b65/images/DomainModel.png"/>
 </p>
